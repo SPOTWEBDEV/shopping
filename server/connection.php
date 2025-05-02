@@ -67,8 +67,9 @@ $sitephone  = "+44 776 0957 798";
 $siteaddress  = "Weston, New York";
 
 
-$accessToken = 'aa56414f2389c17f22b29e993cec8456';
+$accessToken = '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';
 $secretKey = 'c738f9c3081e2d5b051c94f14f9723c0';
-$shopUrl = 'https://admin.shopify.com/store/931mb2-by';
+$shopUrl = "931mb2-by.myshopify.com";
+
 
 session_start();
