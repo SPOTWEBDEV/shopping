@@ -1,6 +1,6 @@
 <?php
-include('../../server/database.php');
-include('../../server/config.php');
+include('../../server/connection.php');
+// include('../../server/config.php');
 
 
 

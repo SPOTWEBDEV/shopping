@@ -1,7 +1,7 @@
 <?php
 
 
-include('../../server/database.php');
+include('../../server/connection.php');
 
 
 
@@ -167,7 +167,7 @@ include('../../server/database.php');
                 </div>
 
                 <h4 class=" text-lg mt-4 mb-3 uppercase ">Careers</h4>
-                <p class=" text_md mb-0 ">If you are interesting in emplyment <br> opportunities at Markethub247. Please
+                <p class=" text_md mb-0 ">If you are interesting in emplyment <br> opportunities at <?php echo $sitename ?>. Please
                     email us :
                 </p>
                 <a href=" # " class=" text-primary ">contact@mail.com</a>

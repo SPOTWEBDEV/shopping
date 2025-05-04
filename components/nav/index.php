@@ -3,7 +3,7 @@
         <div class="container flex items-center justify-between">
             <!-- link -->
             <div class="flex items-center">
-                <a href="#" class="text-[14px] text-secondary hover:text-primary transition duration-300">rafcart@support.com</a>
+                <a href="#" class="text-[14px] text-secondary hover:text-primary transition duration-300"><?php echo  $siteemail ?></a>
             </div>
             <!--link  -->
 
@@ -11,11 +11,11 @@
             <div class="flex items-center">
                 <!-- track order -->
                 <div class="mr-4">
-                    <a href="track-order.html" class="text-secondary text-sm hover:text-primary font-medium leading-[26px] transition duration-200">Track My Order</a>
+                    <a href="<?php echo $domain ?>pages/track_order/" class="text-secondary text-sm hover:text-primary font-medium leading-[26px] transition duration-200">Track My Order</a>
                 </div>
                 <!-- login/register -->
                 <div class="mr-4 flex items-center py-2">
-                    <a href="login.html" class="text-secondary text-sm hover:text-primary font-medium leading-[26px] transition duration-200">Login</a>
+                    <a href="<?php echo $domain  ?>user/login/" class="text-secondary text-sm hover:text-primary font-medium leading-[26px] transition duration-200">Login</a>
                     <span class="text-secondary text-sm">/</span>
                     <a href="register.html" class="text-secondary text-sm hover:text-primary font-medium leading-[26px] transition duration-200">Register</a>
                 </div>
@@ -606,103 +606,16 @@
 
                 <!-- left-content -->
                 <ul class="flex items-center">
-                    <!-- home -->
-                    <li class="relative group">
-                        <a href="index-1.html" class="text-white leading-[26px] flex items-center text-base font-medium px-2.5 py-[15px] gap-1 transition duration-300">Home
-                            <svg width="14" height="14" viewBox="0 0 32 32">
-                                <path fill="currentColor" d="M4.219 10.781L2.78 12.22l12.5 12.5l.719.687l.719-.687l12.5-12.5l-1.438-1.438L16 22.562z" />
-                            </svg>
-                        </a>
 
-                        <ul class="absolute top-full left-0 opacity-0 group-hover:opacity-100 invisible group-hover:visible bg-white py-3 shadow-lg min-w-[170px] z-20 mt-4 group-hover:-mt-0 rounded-[3px] transition-all duration-200">
-                            <li><a href="index-1.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">Home
-                                    page 1</a></li>
-                            <li><a href="index-2.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">Home
-                                    page 2</a></li>
-                            <li><a href="index-3.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">Home
-                                    page 3</a></li>
-                        </ul>
-                    </li>
-                    <!-- shop -->
-                    <li class="relative group">
-                        <a href="#" class="text-white leading-[26px] flex items-center text-base font-medium px-2.5 py-[15px] gap-1 transition duration-300">Shop
-                            <svg width="14" height="14" viewBox="0 0 32 32">
-                                <path fill="currentColor" d="M4.219 10.781L2.78 12.22l12.5 12.5l.719.687l.719-.687l12.5-12.5l-1.438-1.438L16 22.562z" />
-                            </svg>
-                        </a>
+                <li><a href="<?php echo $domain ?>" class="text-white leading-[26px] flex items-center text-base font-medium px-2.5 py-[15px] transition duration-300">Home</a>
+                </li>
 
-                        <ul class="absolute top-full left-0 opacity-0 group-hover:opacity-100 invisible group-hover:visible bg-white py-3 shadow-lg min-w-[170px] z-20 mt-4 group-hover:-mt-0 rounded-[3px] transition-all duration-200">
-                            <li><a href="list-view.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">List
-                                    view</a></li>
-                            <li><a href="grid-view.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">Grid
-                                    view</a></li>
-                            <li><a href="grid-views-2.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">Grid
-                                    view 2</a></li>
-                            <li><a href="#" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">Shopping
-                                    cart</a></li>
-                            <li><a href="#" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">Product
-                                    view</a></li>
-                        </ul>
-                    </li>
-                    <!-- pages -->
-                    <li class="relative group">
-                        <a href="#" class="text-white leading-[26px] flex items-center text-base font-medium px-2.5 py-[15px] gap-1 transition duration-300">Pages
-                            <svg width="14" height="14" viewBox="0 0 32 32">
-                                <path fill="currentColor" d="M4.219 10.781L2.78 12.22l12.5 12.5l.719.687l.719-.687l12.5-12.5l-1.438-1.438L16 22.562z" />
-                            </svg>
-                        </a>
-
-                        <div class="absolute top-full left-0 flex  opacity-0 group-hover:opacity-100 invisible group-hover:visible bg-white py-3 shadow-lg min-w-[170px] z-20 mt-4 group-hover:-mt-0 rounded-[3px] transition-all duration-200">
-                            <!-- Others pages -->
-                            <div class="min-w-[140px]">
-                                <h5 class="text-base pl-4 mb-2 text-secondary ">Others pages</h5>
-                                <ul>
-                                    <li><a href="about.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">About
-                                            us</a></li>
-                                    <li><a href="contact.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">Contact
-                                            us</a></li>
-                                    <li><a href="track-order.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">Track
-                                            order</a></li>
-                                    <li><a href="faq.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">FAQ</a>
-                                    </li>
-                                    <li><a href="404-2.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">404</a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!-- Account pages -->
-                            <div class="min-w-[140px]">
-                                <h5 class="text-base pl-4 mb-2 text-secondary ">Account pages</h5>
-                                <ul>
-                                    <li><a href="my-account.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">My
-                                            Account</a></li>
-                                    <li><a href="login.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">Login</a>
-                                    </li>
-                                    <li><a href="register.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">Register</a>
-                                    </li>
-                                    <li><a href="forgot-password.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">Forgot
-                                            password</a></li>
-                                </ul>
-                            </div>
-
-                            <!-- Checkout page -->
-                            <div class="min-w-[140px]">
-                                <h5 class="text-base pl-4 mb-2 text-secondary ">Checkout page</h5>
-                                <ul>
-                                    <li><a href="checkout.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">Checkout</a>
-                                    </li>
-                                    <li><a href="payment.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">Payment</a>
-                                    </li>
-                                    <li><a href="wishlist.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">Wishlist</a>
-                                    </li>
-                                    <li><a href="order-complete.html" class="block text-[15px] px-4 py-0.5 text-[#2b2d42] hover:text-primary transition duration-200 whitespace-nowrap">Order
-                                            complete</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- contact -->
-                    <li><a href="contact.html" class="text-white leading-[26px] flex items-center text-base font-medium px-2.5 py-[15px] transition duration-300">Contact</a>
+                <li><a href="<?php echo $domain ?>pages/about_us/" class="text-white leading-[26px] flex items-center text-base font-medium px-2.5 py-[15px] transition duration-300">About</a>
+                </li>
+                    
+                   
+                  
+                    <li><a href="<?php echo $domain ?>pages/contact/" class="text-white leading-[26px] flex items-center text-base font-medium px-2.5 py-[15px] transition duration-300">Contact</a>
                     </li>
                 </ul>
                 <!-- left-content end-->
@@ -714,7 +627,7 @@
                     <span class="text-[#e1e1e1]"><svg width="16" height="16" viewBox="0 0 24 24">
                             <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6.515 4.621L9 4l2 3.5L9.5 9c1 2 3.5 4.5 5.5 5.5l1.5-1.5l3.5 2l-.621 2.485c-.223.89-1.029 1.534-1.928 1.351c-5.213-1.06-11.228-7.074-12.287-12.287c-.183-.9.46-1.705 1.35-1.928Z" />
                         </svg></span>
-                    call: +123 456 7890</a>
+                    <?php echo $sitephone ?></a>
             </div>
             <!-- right-content end-->
         </div>

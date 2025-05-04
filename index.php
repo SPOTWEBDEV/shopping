@@ -13,7 +13,7 @@ include('./server/connection.php')
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafcart-Tailwind</title>
+    <title><?php echo $sitename ?> || Home</title>
     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/nice-select2.css">
@@ -45,7 +45,7 @@ include('./server/connection.php')
                                     <div>
                                         <h1 class="text-[38px] md:text-[56px] lg:text-5xl xl:text-[56px] leading-[42px] md:leading-[64px] lg:leading-[48px] xl:leading-[64px] font-medium mb-2 sm:mb-4 text-secondary">
                                             Best Collection For Home Decoration</h1>
-                                        <p class="text-secondary text-base mb-2 sm:mb-4">Discover a shopping experience unlike any other. At Markethub247 we're dedicated to delivering excellence right to your doorstep. Immerse yourself in a world where convenience, style, and endless possibilities converge through our meticulously curated selection of products.</p>
+                                        <p class="text-secondary text-base mb-2 sm:mb-4">Discover a shopping experience unlike any other. At <?php echo $sitename ?> we're dedicated to delivering excellence right to your doorstep. Immerse yourself in a world where convenience, style, and endless possibilities converge through our meticulously curated selection of products.</p>
                                         <div class="mt-[30px] md:mt-[40px]">
                                             <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>/product/all_product/index.php" tabindex="-1">SHOP NOW</a>
                                         </div>
@@ -62,7 +62,7 @@ include('./server/connection.php')
                                     <div>
                                         <h1 class="text-[38px] md:text-[56px] lg:text-5xl xl:text-[56px] leading-[42px] md:leading-[64px] lg:leading-[48px] xl:leading-[64px] font-medium mb-2 sm:mb-4 text-secondary">
                                             Best Collection For Home Decoration</h1>
-                                        <p class="text-secondary text-base mb-2 sm:mb-4">At Markethub247 we're passionate about bringing you the best shopping experience possible. Step into a world of convenience, style, and endless possibilities with our carefully curated selection of products</p>
+                                        <p class="text-secondary text-base mb-2 sm:mb-4">At <?php echo $sitename ?> we're passionate about bringing you the best shopping experience possible. Step into a world of convenience, style, and endless possibilities with our carefully curated selection of products</p>
                                         <div class="mt-[30px] md:mt-[40px]">
                                             <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>/product/all_product/index.php" tabindex="-1">SHOP NOW</a>
                                         </div>
@@ -79,7 +79,7 @@ include('./server/connection.php')
                                     <div>
                                         <h1 class="text-[38px] md:text-[56px] lg:text-5xl xl:text-[56px] leading-[42px] md:leading-[64px] lg:leading-[48px] xl:leading-[64px] font-medium mb-2 sm:mb-4 text-secondary">
                                             Best Collection For Home Decoration</h1>
-                                        <p class="text-secondary text-base mb-2 sm:mb-4">Embark on a shopping journey like no other. At Markethub247 we're dedicated to crafting an unforgettable experience tailored just for you. Step into a world where convenience, style, and boundless opportunities await, all within the comfort of your home.</p>
+                                        <p class="text-secondary text-base mb-2 sm:mb-4">Embark on a shopping journey like no other. At <?php echo $sitename ?> we're dedicated to crafting an unforgettable experience tailored just for you. Step into a world where convenience, style, and boundless opportunities await, all within the comfort of your home.</p>
                                         <div class="mt-[30px] md:mt-[40px]">
                                             <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>/product/all_product/index.php" tabindex="-1">SHOP NOW</a>
                                         </div>
