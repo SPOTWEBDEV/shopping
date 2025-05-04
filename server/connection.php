@@ -22,7 +22,7 @@ define("HOST", "localhost");
 $isLocalhost = ($_SERVER['HTTP_HOST'] === 'localhost');
 
 // Database connection (Only use one based on environment)
-$connection = '';
+// $connection = '';
 
 if ($isLocalhost) {
     // Offline (Localhost)
@@ -41,11 +41,11 @@ if ($isLocalhost) {
   
 } else {
     // Online (Live Server)
-    $domain = "https://quanstofy.com/";
+    $domain = "https://bencofashion.com/";
 
-    define("USER", "quanstof_billz-crypto");
-    define("PASSWORD", "quanstof_billz-crypto");
-    define("DATABASE", "quanstof_billz-crypto");
+    define("USER", "bencofas_shopping");
+    define("PASSWORD", "bencofas_shopping");
+    define("DATABASE", "bencofas_shopping");
 
     // Database connection
     $connection = mysqli_connect(HOST, USER, PASSWORD, DATABASE);
@@ -60,9 +60,9 @@ if ($isLocalhost) {
 $sitename = "Benco Fashion";
 
 // Email Config 
-$siteemail = "support@quanstofy.com";
-$emailpassword  = "support@quanstofy.com";
-$host = 'mail.quanstofy.com';
+$siteemail = "support@bencofashion.com";
+$emailpassword  = "support@bencofashion.com";
+$host = 'mail.bencofashion.com';
 $sitephone  = "+44 776 0957 798";
 $siteaddress  = "Weston, New York";
 
