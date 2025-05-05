@@ -1,4 +1,4 @@
-<?php include('../../server/database.php');
+<?php include('../../server/connection.php');
 include('../../server/clients/auth/index.php');
 
 

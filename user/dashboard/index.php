@@ -1,6 +1,6 @@
 <?php
 include('../../server/connection.php');
-// include('../../server/clients/auth/index.php');
+include('../../server/clients/auth/index.php');
 
 
 
@@ -77,7 +77,7 @@ include('../../server/connection.php');
                         </div>
                         <div class="mt-4">
                             <?php
-                            $statement = "SELECT * FROM `client` WHERE `id`='$id'";
+                            $statement = "SELECT * FROM `user` WHERE `id`='$id'";
                             $query = mysqli_query($connection, $statement);
                             if (mysqli_num_rows($query) > 0) {
                                 while ($row = mysqli_fetch_assoc($query)) { ?>

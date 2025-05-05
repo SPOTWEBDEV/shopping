@@ -1,7 +1,7 @@
 <?php
 
 
-include('../../server/database.php');
+include('../../server/connection.php');
 
 ?>
 
