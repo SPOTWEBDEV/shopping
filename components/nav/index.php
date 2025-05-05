@@ -53,56 +53,9 @@
                 <h2><?php echo "$sitename"  ?></h2>
             </a>
             <!-- logo end-->
+      
+            
 
-            <!-- search wrape -->
-            <div x-data="{isOpen:false}" class="relative hidden lg:block">
-                <div @click.outside="isOpen=false" class="border border-[#FD3D57] rounded-md w-[535px] xl:w-[675px] flex">
-                    <!-- search categories -->
-                    <div class="border-r border-primary w-36 bg-white rounded-l-md h-[43px] flex justify-center items-center">
-                        <select class="nice-select nice-select all-category">
-                            <option value="All category" selected>All category</option>
-                            <option value="Men">Men</option>
-                        </select>
-                    </div>
-
-                    <!-- search -->
-                    <div class="max-w-[250px] xl:max-w-[390px] h-auto flex-grow">
-                        <input @click="isOpen=true" type="text" placeholder="Search product..." class="px-5 py-2.5 border-none text-sm w-full focus:ring-0 focus:outline-none leading-relaxed">
-                    </div>
-                    <!-- search btn -->
-                    <div class="w-[142px]">
-                        <button class="bg-primary rounded-r-md w-full px-4 py-2.5 text-white text-base font-medium">Search</button>
-                    </div>
-                </div>
-
-                <div :class="isOpen ? 'opacity-100 visible mt-2.5' : 'invisible opacity-0 mt-0'" class="absolute left-0 top-[46px] w-full shadow bg-white rounded-b-[3px] z-10  transition-all duration-300">
-                    <div class="h-auto overflow-auto">
-                        <a href="product-view.html" class="flex items-center py-2 border-b border-[#ebebeb] hover:bg-[#f2f0f0] transition-all duration-300">
-                            <div class="w-[90px] p-2.5">
-                                <img src="./assets/images/laptop-2.png" class="w-full h-[50px] object-contain" alt="product">
-                            </div>
-                            <div class="pl-2">
-                                <h4 class="text-lg font-medium text-secondary mb-1.5">HP Pavilion 15</h4>
-                                <div class="mb-[5px] font-medium leading-[22px]">
-                                    <span class="text-primary mr-[5px]">$45.00</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="product-view.html" class="flex items-center py-2 hover:bg-[#f2f0f0] transition-all duration-300">
-                            <div class="w-[90px] p-2.5">
-                                <img src="./assets/images/laptop-1.png" class="w-full h-[50px] object-contain" alt="product">
-                            </div>
-                            <div class="pl-2">
-                                <h4 class="text-lg font-medium text-secondary mb-1.5">HP Pavilion 15</h4>
-                                <div class="mb-[5px] font-medium leading-[22px]">
-                                    <span class="text-primary mr-[5px]">$45.00</span>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
 
             <!-- header icone -->
             <div class="flex items-center">
@@ -246,7 +199,7 @@
             <a href="#" class="lg:hidden"><img src="./assets/images/logo-white.svg" class="w-[120px]" alt=""></a>
             <div class="flex items-center">
                 <!-- All categories -->
-                <div class="bg-primary py-1.5 w-[210px] relative hidden lg:block group-hbr mr-8">
+                <!-- <div class="bg-primary py-1.5 w-[210px] relative hidden lg:block group-hbr mr-8">
                     <div class="py-2.5 px-4 flex items-center justify-center w-full">
                         <span class="text-white mr-2.5"><svg width="20" height="20" viewBox="0 0 24 24">
                                 <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -605,7 +558,7 @@
                             <span class="text-[15px] cursor-pointer text-secondary">Mobile</span>
                         </a>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- left-content -->
                 <ul class="flex items-center">
