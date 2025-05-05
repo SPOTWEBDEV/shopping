@@ -143,7 +143,7 @@
                     <div class="absolute top-full right-[1px] bg-white z-20 rounded-b-[3px] py-5 px-[15px] w-[205px] shadow-sm mt-3.5 group-hover:mt-[5px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                         <div>
                             <p class="text-sm leading-[18px] font-medium mb-4 text-secondary text-center">Welcome to
-                                RAFCART Shop</p>
+                                <?php echo $sitename ?> Shop</p>
                             <div class="flex justify-between">
                                 <a href="#" class="min-w-[85px] rounded-[3px] py-1 px-[15px] border border-primary bg-primary text-white inline-block text-center text-sm font-medium hover:bg-transparent hover:text-primary transition duration-300">JOIN</a>
                                 <a href="#" class="min-w-[85px] rounded-[3px] py-1 px-2.5 border border-primary hover:bg-primary bg-white hover:text-white inline-block text-center text-sm font-medium text-primary transition duration-300">Sing

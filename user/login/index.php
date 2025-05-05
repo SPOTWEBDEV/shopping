@@ -101,7 +101,7 @@ if (isset($_POST['submit'])) {
                         <label for="save-default" class="text-sm sm:text-base">Remember Me</label>
                     </div>
                     <div>
-                        <a href="forgot-password.html" class="text-primary text-sm sm:text-base">Forgot Password?</a>
+                    
                     </div>
                 </div>
 

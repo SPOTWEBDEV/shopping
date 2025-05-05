@@ -47,7 +47,7 @@ include('./server/connection.php')
                                             Best Collection For Home Decoration</h1>
                                         <p class="text-secondary text-base mb-2 sm:mb-4">Discover a shopping experience unlike any other. At <?php echo $sitename ?> we're dedicated to delivering excellence right to your doorstep. Immerse yourself in a world where convenience, style, and endless possibilities converge through our meticulously curated selection of products.</p>
                                         <div class="mt-[30px] md:mt-[40px]">
-                                            <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>/product/all_product/index.php" tabindex="-1">SHOP NOW</a>
+                                            <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>pages/product/" tabindex="-1">SHOP NOW</a>
                                         </div>
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@ include('./server/connection.php')
                                             Best Collection For Home Decoration</h1>
                                         <p class="text-secondary text-base mb-2 sm:mb-4">At <?php echo $sitename ?> we're passionate about bringing you the best shopping experience possible. Step into a world of convenience, style, and endless possibilities with our carefully curated selection of products</p>
                                         <div class="mt-[30px] md:mt-[40px]">
-                                            <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>/product/all_product/index.php" tabindex="-1">SHOP NOW</a>
+                                            <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>pages/product/" tabindex="-1">SHOP NOW</a>
                                         </div>
                                     </div>
                                 </div>
@@ -81,7 +81,7 @@ include('./server/connection.php')
                                             Best Collection For Home Decoration</h1>
                                         <p class="text-secondary text-base mb-2 sm:mb-4">Embark on a shopping journey like no other. At <?php echo $sitename ?> we're dedicated to crafting an unforgettable experience tailored just for you. Step into a world where convenience, style, and boundless opportunities await, all within the comfort of your home.</p>
                                         <div class="mt-[30px] md:mt-[40px]">
-                                            <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>/product/all_product/index.php" tabindex="-1">SHOP NOW</a>
+                                            <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>pages/product/" tabindex="-1">SHOP NOW</a>
                                         </div>
                                     </div>
                                 </div>
@@ -156,7 +156,7 @@ include('./server/connection.php')
                         <h3 class="text-lg leading-4 mb-2 text-[#FD3D57]">30% offer</h3>
                         <h4 class="text-[22px] leading-[26px] text-secondary mb-2">Free Shipping</h4>
                         <p class="text-[15px] leading-4 text-[#464545] mb-5">Attractive Natural Furniture</p>
-                        <a href="#" class="primary-btn min-w-[80px]">Shop Now</a>
+                        <a href="<?php echo "$domain" ?>pages/product/" class="primary-btn min-w-[80px]">Shop Now</a>
                     </div>
                     <div class="flex justify-center">
                         <img src="./assets/images/sofa-1.png" class="w-[200px] h-[150px] lg:h-[180px] object-contain flex-shrink-0 hover:scale-105 transition-all duration-300" alt="product">
@@ -170,7 +170,7 @@ include('./server/connection.php')
                         <h3 class="text-lg leading-4 mb-2 text-[#FD3D57]">50% offer</h3>
                         <h4 class="text-[22px] leading-[26px] text-secondary mb-2">Flash Sale</h4>
                         <p class="text-[15px] leading-4 text-[#464545] mb-5">Attractive Natural Furniture</p>
-                        <a href="#" class="primary-btn min-w-[80px]">Shop Now</a>
+                        <a href="<?php echo "$domain" ?>pages/product/" class="primary-btn min-w-[80px]">Shop Now</a>
                     </div>
                     <div class="flex justify-center">
                         <img src="./assets/images/sofa-2.png" class="w-[200px] h-[150px] lg:h-[180px] object-contain flex-shrink-0 hover:scale-105 transition-all duration-300" alt="product">

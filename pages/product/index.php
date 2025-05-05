@@ -1,6 +1,6 @@
 <?php
 
-include('./server/database.php')
+include('../../server/connection.php')
 
 ?>
 
@@ -13,16 +13,16 @@ include('./server/database.php')
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rafcart-Tailwind</title>
-    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./assets/css/nice-select2.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <script defer src="./assets/js/alpine.min.js"></script>
+    <link rel="shortcut icon" href="..assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../assets/css/nice-select2.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script defer src="../../assets/js/alpine.min.js"></script>
 </head>
 
 <body>
    
-  <?php include('./components/nav/index.php') ?>
+  <?php include('../../components/nav/index.php') ?>
 
 
     <!-- breadcrumbs -->
@@ -269,7 +269,7 @@ include('./server/database.php')
                             <div class="bg-[#f3f3f3] group-hover:bg-[#e5e5e58c] group-hover:opacity-80 relative">
                                 <div class="py-8 flex justify-center">
                                     <img loading="lazy" class="w-full h-[130px] object-contain"
-                                        src="./assets/images/laptop-3.png" alt="product">
+                                        src="../../assets/images/laptop-3.png" alt="product">
                                 </div>
                                 <span class="absolute top-0 left-0 bg-primary text-white p-2 rounded-br-lg">HOT</span>
                                 <div
@@ -352,7 +352,7 @@ include('./server/database.php')
                             <div class="bg-[#f3f3f3] group-hover:bg-[#e5e5e58c] group-hover:opacity-80  relative">
                                 <div class="py-8 flex justify-center">
                                     <img loading="lazy" class="w-full h-[130px] object-contain"
-                                        src="./assets/images/shoes-5.png" alt="product">
+                                        src="../../assets/images/shoes-5.png" alt="product">
                                 </div>
 
                                 <div
@@ -435,7 +435,7 @@ include('./server/database.php')
                             <div class="bg-[#f3f3f3] group-hover:bg-[#e5e5e58c] group-hover:opacity-80 relative">
                                 <div class="py-8 flex justify-center">
                                     <img loading="lazy" class="w-full h-[130px] object-contain"
-                                        src="./assets/images/headphone-3.png" alt="product">
+                                        src="../../assets/images/headphone-3.png" alt="product">
                                 </div>
 
                                 <div
@@ -518,7 +518,7 @@ include('./server/database.php')
                             <div class="bg-[#f3f3f3] group-hover:bg-[#e5e5e58c] group-hover:opacity-80 relative">
                                 <div class="py-8 flex justify-center">
                                     <img loading="lazy" class="w-full h-[130px] object-contain"
-                                        src="./assets/images/phone-1.png" alt="product">
+                                        src="../../assets/images/phone-1.png" alt="product">
                                 </div>
                                 <div
                                     class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex gap-3 transition-all duration-500 opacity-0 group-hover:opacity-100">
@@ -600,7 +600,7 @@ include('./server/database.php')
                             <div class="bg-[#f3f3f3] group-hover:bg-[#e5e5e58c] group-hover:opacity-80 relative">
                                 <div class="py-8 flex justify-center">
                                     <img loading="lazy" class="w-full h-[130px] object-contain"
-                                        src="./assets/images/phone-2.png" alt="product">
+                                        src="../../assets/images/phone-2.png" alt="product">
                                 </div>
 
                                 <div
@@ -683,7 +683,7 @@ include('./server/database.php')
                             <div class="bg-[#f3f3f3] group-hover:bg-[#e5e5e58c] group-hover:opacity-80 relative">
                                 <div class="py-8 flex justify-center">
                                     <img loading="lazy" class="w-full h-[130px] object-contain"
-                                        src="./assets/images/laptop-2.png" alt="product">
+                                        src="../../assets/images/laptop-2.png" alt="product">
                                 </div>
 
                                 <div
@@ -766,7 +766,7 @@ include('./server/database.php')
                             <div class="bg-[#f3f3f3] group-hover:bg-[#e5e5e58c] group-hover:opacity-80 relative">
                                 <div class="py-8 flex justify-center">
                                     <img loading="lazy" class="w-full h-[130px] object-contain"
-                                        src="./assets/images/shoes-3.png" alt="product">
+                                        src="../../assets/images/shoes-3.png" alt="product">
                                 </div>
 
                                 <div
@@ -849,7 +849,7 @@ include('./server/database.php')
                             <div class="bg-[#f3f3f3] group-hover:bg-[#e5e5e58c] group-hover:opacity-80 relative">
                                 <div class="py-8 flex justify-center">
                                     <img loading="lazy" class="w-full h-[130px] object-contain"
-                                        src="./assets/images/headphone-2.png" alt="product">
+                                        src="../../assets/images/headphone-2.png" alt="product">
                                 </div>
 
                                 <div
@@ -932,7 +932,7 @@ include('./server/database.php')
                             <div class="bg-[#f3f3f3] group-hover:bg-[#e5e5e58c] group-hover:opacity-80 relative">
                                 <div class="py-8 flex justify-center">
                                     <img loading="lazy" class="w-full h-[130px] object-contain"
-                                        src="./assets/images/iphone-xr.png" alt="product">
+                                        src="../../assets/images/iphone-xr.png" alt="product">
                                 </div>
 
                                 <div
@@ -1035,7 +1035,7 @@ include('./server/database.php')
     <!-- shop grid view end-->
 
     <!-- footer area -->
-     <?php include('./components/footer/index.php') ?>
+     <?php include('../../components/footer/index.php') ?>
     <!-- footer area end -->
 
 
@@ -1292,9 +1292,9 @@ include('./server/database.php')
     </div>
 
     <!-- script -->
-    <script src="./assets/js/swiper-bundle.min.js"></script>
-    <script src="./assets/js/nice-select2.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="../../assets/js/swiper-bundle.min.js"></script>
+    <script src="../../assets/js/nice-select2.js"></script>
+    <script src="../../assets/js/main.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
             // Optional parameters
@@ -1318,10 +1318,10 @@ include('./server/database.php')
         });
         const productImageModule = {
             productImages: [
-                './assets/images/headphone-3.png',
-                './assets/images/apple-watch.png',
-                './assets/images/watch3.png',
-                './assets/images/watch2.png',
+                '../../assets/images/headphone-3.png',
+                '../../assets/images/apple-watch.png',
+                '../../assets/images/watch3.png',
+                '../../assets/images/watch2.png',
             ],
             imageIndex: 0
         }
