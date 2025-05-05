@@ -23,7 +23,7 @@
                     <div class="flex lg:flex-wrap md:flex-nowrap flex-wrap">
                         <div class="w-full">
                             <div class="w-[120px]">
-                                <?php echo "$sitename"  ?>
+                                <h1><?php echo "$sitename"  ?></h1>
                             </div>
                             <div class="w-full">
                                 <p class="text-sm sm:text-[15px] text-[#2B2D42] mt-4 flex-wrap md:max-w-[330px]">Thank you for subscribing to our newsletter. We believe in providing valuable insights and updates to our readers. Your support means a lot to us. If you have any feedback or suggestions, we'd love to hear from you.  Let's stay connected and informed together</p>
@@ -145,7 +145,7 @@
                 </div>
                 <div class="w-full md:w-1/2">
                     <div class="text-center md:text-right">
-                        <img src="<?php echo $domain ?>assets/images/payment-method.png" class="w-[333px] inline-block flex-shrink-0" alt="payment method">
+                         <p>Developed by Spotwebdev</p>
                     </div>
                 </div>
             </div>

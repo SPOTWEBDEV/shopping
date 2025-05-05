@@ -43,11 +43,14 @@
     <nav class="bg-white py-1.5">
         <div class="container flex items-center justify-between">
             <a href="index-1.html" class="lg:hidden">
-                <img src="./assets/images/logo.svg" class="w-[120px]" alt="">
+                <h2><?php echo "$sitename"  ?></h2>
+                <!-- <img src="./assets/images/logo.svg" class="w-[120px]" alt=""> -->
             </a>
             <!-- logo -->
             <a class="w-[130px] lg:block hidden" href="index-1.html">
-                <img src="./assets/images/logo.svg" class="w-full object-cover" alt="logo">
+                <!-- <img src="./assets/images/logo.svg" class="w-full object-cover" alt="logo">
+                  -->
+                <h2><?php echo "$sitename"  ?></h2>
             </a>
             <!-- logo end-->
 
