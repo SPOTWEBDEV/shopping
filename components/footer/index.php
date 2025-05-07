@@ -49,9 +49,9 @@
                         <div class="w-1/2 lg:px-3">
                             <div>
                                 <h4 class="text-lg text-secondary font-medium mb-5 mt-2">MY ACCOUNT</h4>
-                                <a href="<?php echo" $domain " ?>/pages/about_us/index.php" class="text-[15px] leading-6 text-secondary block mb-3">Orders</a>
-                                <a href="<?php echo" $domain " ?>/checkout/wishlist/index.php" class="text-[15px] leading-6 text-secondary block mb-3">Wishlist</a>
-                                <a href="<?php echo" $domain " ?>/pages/track_order/index.php" class="text-[15px] leading-6 text-secondary block mb-3">Track
+                                <a href="<?php echo $domain ?>pages/about_us/index.php" class="text-[15px] leading-6 text-secondary block mb-3">Orders</a>
+                                <a href="<?php echo $domain ?>checkout/wishlist/index.php" class="text-[15px] leading-6 text-secondary block mb-3">Wishlist</a>
+                                <a href="<?php echo $domain ?>pages/track_order/index.php" class="text-[15px] leading-6 text-secondary block mb-3">Track
                                     Order</a>
                                 <a href="" class="text-[15px] leading-6 text-secondary block mb-3">Manage
                                     Account</a>
@@ -61,13 +61,13 @@
                         <div class="w-1/2 px-3">
                             <div>
                                 <h4 class="text-lg text-secondary font-medium mb-5 mt-2">INFORMATION</h4>
-                                <a href="<?php echo" $domain " ?>/pages/about_us/index.php" class="text-[15px] leading-6 text-secondary block mb-3">About
+                                <a href="<?php echo$domain ?>pages/about_us/index.php" class="text-[15px] leading-6 text-secondary block mb-3">About
                                     Us</a>
                                 <a href="#" class="text-[15px] leading-6 text-secondary block mb-3">Return Policy</a>
-                                <a href="<?php echo" $domain " ?>/pages/terms_condition/index.php" class="text-[15px] leading-6 text-secondary block mb-3">Terms &amp;
+                                <a href="<?php echo $domain  ?>pages/terms_condition/index.php" class="text-[15px] leading-6 text-secondary block mb-3">Terms &amp;
                                     condition</a>
-                                <a href="<?php echo" $domain " ?>/pages/privacy_policy/index.php" class="text-[15px] leading-6 text-secondary block mb-3">Privacy Policy</a>
-                                <a href="<?php echo" $domain " ?>/pages/faq/index.php" class="text-[15px] leading-6 text-secondary block mb-3">FAQ</a>
+                                <a href="<?php echo $domain  ?>pages/privacy_policy/" class="text-[15px] leading-6 text-secondary block mb-3">Privacy Policy</a>
+                                <a href="<?php echo $domain ?>pages/faq/index.php" class="text-[15px] leading-6 text-secondary block mb-3">FAQ</a>
                             </div>
                         </div>
                     </div>
