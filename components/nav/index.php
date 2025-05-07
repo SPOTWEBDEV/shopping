@@ -145,8 +145,8 @@
                             <p class="text-sm leading-[18px] font-medium mb-4 text-secondary text-center">Welcome to
                                 <?php echo $sitename ?> Shop</p>
                             <div class="flex justify-between">
-                                <a href="#" class="min-w-[85px] rounded-[3px] py-1 px-[15px] border border-primary bg-primary text-white inline-block text-center text-sm font-medium hover:bg-transparent hover:text-primary transition duration-300">JOIN</a>
-                                <a href="#" class="min-w-[85px] rounded-[3px] py-1 px-2.5 border border-primary hover:bg-primary bg-white hover:text-white inline-block text-center text-sm font-medium text-primary transition duration-300">Sing
+                                <a href="<?php echo $domain ?>user/login/" class="min-w-[85px] rounded-[3px] py-1 px-[15px] border border-primary bg-primary text-white inline-block text-center text-sm font-medium hover:bg-transparent hover:text-primary transition duration-300">JOIN</a>
+                                <a href="<?php echo $domain ?>user/rgister/" class="min-w-[85px] rounded-[3px] py-1 px-2.5 border border-primary hover:bg-primary bg-white hover:text-white inline-block text-center text-sm font-medium text-primary transition duration-300">Sing
                                     in</a>
                             </div>
                         </div>
@@ -572,6 +572,9 @@
                    
                   
                     <li><a href="<?php echo $domain ?>pages/contact/" class="text-white leading-[26px] flex items-center text-base font-medium px-2.5 py-[15px] transition duration-300">Contact</a>
+                    </li>
+
+                    <li><a href="<?php echo $domain ?>user/add_product/" class="text-white leading-[26px] flex items-center text-base font-medium px-2.5 py-[15px] transition duration-300">Add-Product</a>
                     </li>
                 </ul>
                 <!-- left-content end-->

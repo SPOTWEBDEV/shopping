@@ -4,7 +4,7 @@
 
 
 
-include('../../server/database.php');
+include('../../server/connection.php');
 
 ?>
 
@@ -32,6 +32,10 @@ include('../../server/database.php');
 
 
    
+    <?php
+    include('../../components/nav/index.php');
+
+    ?>
 
     <!-- breadcrumbs -->
     <div class="container">
