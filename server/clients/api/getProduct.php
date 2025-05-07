@@ -1,5 +1,5 @@
 <?php
-include('../server/connection.php'); 
+include('../../connection.php');
 
 $query = <<<GQL
 {
@@ -8,10 +8,16 @@ $query = <<<GQL
       node {
         id
         title
-        variants(first:10 ) {
+        images(first: 1) {
           edges {
             node {
-              id
+              src
+            }
+          }
+        }
+        variants(first: 1) {
+          edges {
+            node {
               price
             }
           }
@@ -21,6 +27,7 @@ $query = <<<GQL
   }
 }
 GQL;
+
 
 $ch = curl_init("https://$shopUrl/admin/api/2025-01/graphql.json");
 
@@ -39,7 +46,7 @@ if (curl_errno($ch)) {
 }
 curl_close($ch);
 
-echo "<pre>";
-print_r(json_decode($response, true));
-echo "</pre>";
+
+echo json_encode($response);
+
 ?>

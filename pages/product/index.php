@@ -1333,7 +1333,4 @@ include('../../server/connection.php')
         })
     </script>
 </body>
-
-
-<!-- Mirrored from themes.rslahmed.dev/rafcart-tailwind/grid-view.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Apr 2024 11:52:42 GMT -->
 </html>
