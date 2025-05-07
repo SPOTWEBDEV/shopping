@@ -145,7 +145,7 @@
                 </div>
                 <div class="w-full md:w-1/2">
                     <div class="text-center md:text-right">
-                         <p styl>Developed by Spotwebdev</p>
+                         <p style="color: red;">Developed by Spotwebdev</p>
                     </div>
                 </div>
             </div>

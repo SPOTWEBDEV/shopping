@@ -230,37 +230,7 @@ include('../../server/connection.php')
 
                     </div>
 
-                    <div class="flex items-center ml-auto">
-                        <a href="grid-view.html">
-                            <div
-                                class="w-10 h-8 border border-primary  bg-primary text-white text-center rounded-[3px] ml-2.5 flex items-center justify-center">
-                                <svg width="20" height="20" viewBox="0 0 20 20">
-                                    <path fill="currentColor" fill-rule="evenodd"
-                                        d="M8 4H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm7 0h-3a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-7 7H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zm7 0h-3a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1z"
-                                        clip-rule="evenodd" /></svg>
-                            </div>
-                        </a>
-                        <a href="list-view.html">
-                            <div
-                                class="w-10 h-8 border border-[#C1C1C1] text-center rounded-[3px] ml-2.5  flex items-center justify-center">
-                                <svg width="20" height="20" viewBox="0 0 48 48">
-                                    <g fill="none">
-                                        <path d="M20 24h24h-24Z" clip-rule="evenodd" />
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="4" d="M20 24h24" />
-                                        <path d="M20 38h24h-24Z" clip-rule="evenodd" />
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="4" d="M20 38h24" />
-                                        <path d="M20 10h24h-24Z" clip-rule="evenodd" />
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="4" d="M20 10h24" />
-                                        <path stroke="currentColor" stroke-linejoin="round" stroke-width="4"
-                                            d="M4 34h8v8H4zm0-14h8v8H4zM4 6h8v8H4z" />
-                                    </g>
-                                </svg>
-                            </div>
-                        </a>
-                    </div>
+                   
                 </div>
 
                 <div class="grid grid-cols-6 gap-5 mt-4">
@@ -271,7 +241,7 @@ include('../../server/connection.php')
                                     <img loading="lazy" class="w-full h-[130px] object-contain"
                                         src="../../assets/images/laptop-3.png" alt="product">
                                 </div>
-                                <span class="absolute top-0 left-0 bg-primary text-white p-2 rounded-br-lg">HOT</span>
+                                
                                 <div
                                     class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex gap-3 transition-all duration-500 opacity-0 group-hover:opacity-100">
                                     <button @click="$store.productView.isActive=true"
