@@ -1,5 +1,5 @@
 <?php
-include('../../server/database.php');
+include('../../server/connection.php');
 $auth = false;   
 if(isset($_SESSION['login_id'])){
     $id = $_SESSION['login_id'];
@@ -52,8 +52,9 @@ if(isset($_SESSION['login_id'])){
 
     
 <?php
-include('../../include/mobile/index.php');
-?>
+    include('../../components/nav/index.php');
+
+    ?>
 
     <!-- breadcrumbs -->
     <div class="container py-5 flex items-center">
@@ -225,7 +226,7 @@ include('../../include/mobile/index.php');
     <!-- footer area -->
     <?php
     
-    include("../../include/client/footer/index.php");
+    include("../../include/user/footer/index.php");
     
     
     ?>

@@ -3,7 +3,7 @@
 
 
 <?php
-include_once('../../../server/database.php');
+include_once('../../../server/connection.php');
 include('../../../server/clients/auth/index.php');
 
 

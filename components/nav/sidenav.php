@@ -28,7 +28,7 @@
                             </span>
                             Manage My Account
                         </a>
-                        <a href="<?php echo "$domain"  ?>user/settings/edit-profile/index.php" class="pl-7 pt-1 block text-primary">Profile
+                        <a href="<?php echo "$domain"  ?>user/settings/edit-profile/" class="pl-7 pt-1 block text-primary">Profile
                             Information</a>
                         <a href="<?php echo "$domain"  ?>user/shipping/" class="pl-7 pt-1 block hover:text-primary">Shipping Address</a>
                         <a href="<?php echo "$domain"  ?>user/settings/change-password/index.php" class="pl-7 pt-1 pb-3 block hover:text-primary">Change

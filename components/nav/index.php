@@ -17,7 +17,7 @@
                 <div class="mr-4 flex items-center py-2">
                     <a href="<?php echo $domain  ?>user/login/" class="text-secondary text-sm hover:text-primary font-medium leading-[26px] transition duration-200">Login</a>
                     <span class="text-secondary text-sm">/</span>
-                    <a href="register.html" class="text-secondary text-sm hover:text-primary font-medium leading-[26px] transition duration-200">Register</a>
+                    <a href="<?php echo $domain ?>user/register/" class="text-secondary text-sm hover:text-primary font-medium leading-[26px] transition duration-200">Register</a>
                 </div>
 
                 <!-- Language -->
@@ -146,8 +146,7 @@
                                 <?php echo $sitename ?> Shop</p>
                             <div class="flex justify-between">
                                 <a href="<?php echo $domain ?>user/login/" class="min-w-[85px] rounded-[3px] py-1 px-[15px] border border-primary bg-primary text-white inline-block text-center text-sm font-medium hover:bg-transparent hover:text-primary transition duration-300">JOIN</a>
-                                <a href="<?php echo $domain ?>user/rgister/" class="min-w-[85px] rounded-[3px] py-1 px-2.5 border border-primary hover:bg-primary bg-white hover:text-white inline-block text-center text-sm font-medium text-primary transition duration-300">Sing
-                                    in</a>
+                                <a href="<?php echo $domain ?>user/register/" class="min-w-[85px] rounded-[3px] py-1 px-2.5 border border-primary hover:bg-primary bg-white hover:text-white inline-block text-center text-sm font-medium text-primary transition duration-300">Signup</a>
                             </div>
                         </div>
                         <div class="pt-2.5">

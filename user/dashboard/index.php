@@ -50,7 +50,7 @@ include('../../server/clients/auth/index.php');
             </span>
 
         </a>
-        <a href="<?php echo "$domain" ?>/user/dashboard/index.php" class="text-secondary text-[13px] sm:text-base"> My Account </a>
+        <a href="<?php echo "$domain" ?>/client/dashboard/index.php" class="text-secondary text-[13px] sm:text-base"> My Account </a>
     </div>
     <!-- breadcrumbs end-->
 
@@ -73,11 +73,11 @@ include('../../server/clients/auth/index.php');
                     <div class="col-span-12 md:col-span-4 box_shadow p-6 min-h-[225px]">
                         <div class="flex justify-between items-center">
                             <h4 class="text-lg">Personal Profile</h4>
-                            <a href="<?php echo $domain  ?>user/shipping/" class="text-primary">Edit</a>
+                            <a href="<?php echo $domain  ?>user/profile/" class="text-primary">Edit</a>
                         </div>
                         <div class="mt-4">
                             <?php
-                            $statement = "SELECT * FROM `user` WHERE `id`='$id'";
+                            $statement = "SELECT * FROM `client` WHERE `id`='$id'";
                             $query = mysqli_query($connection, $statement);
                             if (mysqli_num_rows($query) > 0) {
                                 while ($row = mysqli_fetch_assoc($query)) { ?>
@@ -98,7 +98,7 @@ include('../../server/clients/auth/index.php');
                     <div class="col-span-12 md:col-span-4 box_shadow p-6 min-h-[225px]">
                         <div class="flex justify-between items-center">
                             <h4 class="text-lg">Shipping Address</h4>
-                            <a href="<?php echo $domain ?>user/settings/edit-profile/" class="text-primary">Edit</a>
+                            <a href="<?php echo $domain ?>client/settings/edit-profile/" class="text-primary">Edit</a>
                         </div>
                         <div class="mt-4">
                             <p class="font-semibold">Counry: <?php echo ($country != "")? "$country":"none" ?></p>
