@@ -1,6 +1,7 @@
 <?php
 include('../../connection.php');
 
+// Shopify GraphQL query to fetch products with variants and images
 $query = <<<GQL
 {
   products(first: 100) {
@@ -18,6 +19,7 @@ $query = <<<GQL
         variants(first: 1) {
           edges {
             node {
+              id
               price
             }
           }
@@ -28,7 +30,7 @@ $query = <<<GQL
 }
 GQL;
 
-
+// Send the GraphQL query to Shopify
 $ch = curl_init("https://$shopUrl/admin/api/2025-01/graphql.json");
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -43,10 +45,33 @@ $response = curl_exec($ch);
 
 if (curl_errno($ch)) {
     echo 'cURL error: ' . curl_error($ch);
+    exit;
 }
 curl_close($ch);
 
+// Decode JSON and extract needed fields
+$responseData = json_decode($response, true);
 
-echo json_encode($response);
+$products = $responseData['data']['products']['edges'];
+$cleanedProducts = [];
 
+foreach ($products as $product) {
+    $node = $product['node'];
+    $variantGID = $node['variants']['edges'][0]['node']['id'];
+
+    // Extract numeric variant ID from the Shopify Global ID (gid://)
+    preg_match('/(\d+)$/', $variantGID, $matches);
+    $variantID = $matches[1] ?? null;
+
+    $cleanedProducts[] = [
+        'title' => $node['title'],
+        'image' => $node['images']['edges'][0]['node']['src'] ?? '',
+        'price' => $node['variants']['edges'][0]['node']['price'] ?? '',
+        'variant_id' => $variantID,
+    ];
+}
+
+// Return cleaned product data as JSON
+header('Content-Type: application/json');
+echo json_encode(['products' => $cleanedProducts]);
 ?>
