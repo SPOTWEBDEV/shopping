@@ -10,9 +10,7 @@
             <!-- right-content -->
             <div class="flex items-center">
                 <!-- track order -->
-                <div class="mr-4">
-                    <a href="<?php echo $domain ?>pages/track_order/" class="text-secondary text-sm hover:text-primary font-medium leading-[26px] transition duration-200">Track My Order</a>
-                </div>
+               
                 <!-- login/register -->
                 <div class="mr-4 flex items-center py-2">
                     <a href="<?php echo $domain  ?>user/login/" class="text-secondary text-sm hover:text-primary font-medium leading-[26px] transition duration-200">Login</a>
@@ -28,11 +26,7 @@
                 </select>
 
                 <!-- Currency -->
-                <select class="nice-select nice-select currency">
-                    <option selected>Currency</option>
-                    <option>Dollar</option>
-                    <option>Euro</option>
-                </select>
+               
             </div>
             <!-- right-content end-->
         </div>
@@ -874,3 +868,9 @@
         </div>
     </div>
     <!-- mobile cart end -->
+
+
+
+    <script>
+        let domain = "<?php echo $domain ?>";
+    </script>

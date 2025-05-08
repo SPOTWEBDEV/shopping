@@ -5,7 +5,7 @@
             isOpen: false,
             subMenus: [{
                     name: 'Home ',
-                    href: '<?php echo $domain ?>'
+                    href:domain
                 },
                
             ]
@@ -16,7 +16,7 @@
             subMenus: [
                 {
                     name: 'Product view',
-                    href: '<?php echo $domain ?>user/product/'
+                    href: domain +  'pages/product/'
                 },
             ]
         },
@@ -25,15 +25,15 @@
             isOpen: false,
             subMenus: [{
                     name: 'My Account',
-                    href: '<?php echo $domain ?>user/dashboard/'
+                    href: domain +  'user/dashboard/'
                 },
                 {
                     name: 'Login',
-                    href: '<?php echo $domain ?>user/login/'
+                    href: domain +  'user/login/'
                 },
                 {
                     name: 'Register',
-                    href: '<?php echo $domain ?>user/register/'
+                    href: domain +  'user/register/'
                 },
             ]
         },
@@ -42,15 +42,15 @@
             isOpen: false,
             subMenus: [{
                     name: 'About Us',
-                    href: '<?php echo $domain ?>pages/about/'
+                    href: domain +  'pages/about_us/'
                 },
                 {
                     name: 'Contact Us',
-                    href: '<?php echo $domain ?>pages/contact/'
+                    href: domain +  'pages/contact/'
                 },
                 {
                     name: 'FAQ',
-                    href: '<?php echo $domain ?>pages/faq/'
+                    href: domain +  'pages/faq/'
                 },
    
             ]
