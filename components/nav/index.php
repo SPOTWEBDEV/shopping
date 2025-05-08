@@ -605,7 +605,7 @@
                 <span class="text-[11px] leading-[10px] mt-1 text-secondary">Menu</span>
             </button>
 
-            <!-- Categories -->
+            <!-- Categories
             <button @click="$store.category.isCategory=true" class="relative text-secondary flex flex-col justify-center items-center text-center transition-all">
                 <span class="text-secondary">
                     <svg width="22" height="22" viewBox="0 0 2048 2048">
@@ -613,7 +613,7 @@
                     </svg>
                 </span>
                 <span class="text-[11px] leading-[10px] mt-1 text-secondary">Categories</span>
-            </button>
+            </button> -->
 
             <!-- Search -->
             <button @click="$store.search.isSearch=true" class="relative text-secondary flex flex-col justify-center items-center text-center">
