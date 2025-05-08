@@ -47,7 +47,7 @@ include('../../server/connection.php')
                     <path fill="currentColor" d="M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6l-6-6z" />
                 </svg>
             </span>
-            <a href="#" class="text-secondary text-[13px] sm:text-base">Grid view</a>
+          
         </div>
     </div>
     <!-- breadcrumbs end-->
@@ -68,13 +68,7 @@ include('../../server/connection.php')
                                 </svg>
                             </button>
                         </div>
-                        <div class="border-b pb-14 rounded mt-5">
-                            <select class="nice_select nice-select">
-                                <option selected>Default sorting</option>
-                                <option>Price low-high</option>
-                                <option>Price high-low</option>
-                            </select>
-                        </div>
+                       
                     </div>
 
                     <div class="mt-6 sm:mt-2">
@@ -223,14 +217,6 @@ include('../../server/connection.php')
                             id="mobile_filter_btn">FILTER</button>
                     </div>
 
-                    <div class="cursor-pointer hidden sm:block">
-                        <select class="nice-select nice-select">
-                            <option selected>Default sorting</option>
-                            <option>Price low-high</option>
-                            <option>Price high-low</option>
-                        </select>
-
-                    </div>
 
 
                 </div>

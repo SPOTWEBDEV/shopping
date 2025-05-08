@@ -34,7 +34,7 @@
                         <a href="<?php echo "$domain"  ?>user/settings/change-password/index.php" class="pl-7 pt-1 pb-3 block hover:text-primary">Change
                             Password</a>
                     </div>
-                    <div class="border-b mt-3">
+                    <!-- <div class="border-b mt-3">
                         <a href="order-history.html" class="flex gap-2 items-center text-[18px] font-medium hover:text-primary group">
                             <span class="group-hover:text-primary">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32">
@@ -48,8 +48,8 @@
                         <a href="#" class="pl-7 pt-1 block hover:text-primary">My
                             Cancellations</a>
                         <a href="#" class="pl-7 pt-1 pb-3 block hover:text-primary">My Reviews</a>
-                    </div>
-                    <div class="border-b mt-3">
+                    </div> -->
+                    <!-- <div class="border-b mt-3">
                         <a href="payment-method.html" class="flex gap-2 items-center text-lg lg:text-base xl:text-lg font-medium hover:text-primary group">
                             <span class="group-hover:text-primary">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 2048 2048">
@@ -60,7 +60,7 @@
                             Payments Methods
                         </a>
                         <a href="vaucher.html" class="pl-7 pt-1 pb-3 block hover:text-primary">Voucher</a>
-                    </div>
+                    </div> -->
                     <div class="border-b mt-3">
                         <a href="<?php echo "$domain" ?>user/wishlist/index.php" class="flex gap-2 items-center text-[18px] font-medium pb-3 hover:text-primary group">
                             <span class="group-hover:text-primary">
