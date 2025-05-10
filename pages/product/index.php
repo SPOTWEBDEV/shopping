@@ -151,8 +151,8 @@ include('../../server/connection.php')
 
                         <div class="pb-4 border-b border-[#E9E4E4] mb-4">
                             <h4 class="text-xl font-medium  text-secondary uppercase">Price</h4>
-                            <span id="rangeValue" class="block relative text-center text-xl font-semibold">500</span>
-                            <input type="range" class="range" min="0" max="1000" onchange="rangeslide(this.value)" />
+                            <span id="rangeValue" class="block relative text-center text-xl font-semibold">1</span>
+                            <input type="range" class="range filterDataByPrice" min="0" value="1" max="1000" />
                         </div>
 
                         <div class="shop_filter">
@@ -254,9 +254,6 @@ include('../../server/connection.php')
     <!-- footer area end -->
 
 
-
-
-
     <!-- script -->
     <script src="../../assets/js/swiper-bundle.min.js"></script>
     <script src="../../assets/js/nice-select2.js"></script>
@@ -311,10 +308,13 @@ include('../../server/connection.php')
         import fetchAndRenderProducts from '../../assets/js/get_product.js';
 
         const data = await fetchAndRenderProducts()
-        if (data) {
+
+        const renderProducts = (product) => {
+
             $('#products').html('');
-            data.forEach(product => {
-                console.log(product)
+            product.forEach(product => {
+                console.log(product);
+
                 const html = `
                             <div class="col-span-6 sm:col-span-3 md:col-span-2">
                                 <div class="border rounded group">
@@ -359,7 +359,23 @@ include('../../server/connection.php')
                             </div>`;
                 $('#products').append(html);
             });
+
         }
+        renderProducts(data)
+
+        let filterDataByPrice = document.querySelector('.filterDataByPrice')
+
+        filterDataByPrice.addEventListener('change', (event) => {
+            document.querySelector('#rangeValue').innerHTML = event.target.value
+            const minPrice = parseFloat(event.target.value); // convert to number
+
+            const newData = data.filter(product => {
+                return parseFloat(product.price) >= minPrice; // filter from this value upward
+            });
+
+
+            renderProducts(newData)
+        })
     </script>
 
 </body>
