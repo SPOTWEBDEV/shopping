@@ -747,7 +747,13 @@ include('./server/connection.php')
         })
     </script>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/add_to_cart.js"></script>
+    <script type="module">
+        import fetchAndRenderProducts from './assets/js/get_product.js';
+        const data = await fetchAndRenderProducts()
+        console.log(data)
+    </script>
 </body>
 
 

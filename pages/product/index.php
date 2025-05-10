@@ -47,7 +47,7 @@ include('../../server/connection.php')
                     <path fill="currentColor" d="M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6l-6-6z" />
                 </svg>
             </span>
-          
+
         </div>
     </div>
     <!-- breadcrumbs end-->
@@ -68,7 +68,7 @@ include('../../server/connection.php')
                                 </svg>
                             </button>
                         </div>
-                       
+
                     </div>
 
                     <div class="mt-6 sm:mt-2">
@@ -304,73 +304,62 @@ include('../../server/connection.php')
     <!-- <div id="products" class="grid grid-cols-12 gap-4"></div> -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            function fetchAndRenderProducts(limit = 20) {
-                $.ajax({
-                    url: "<?php echo $domain ?>server/clients/api/getProduct.php",
-                    method: "GET",
-                    dataType: "json",
-                    success: function(response) {
-                        const allProducts = response.products;
-                        const shuffled = allProducts.sort(() => 0.5 - Math.random());
-                        const limitedProducts = shuffled.slice(0, limit);
-                        $('#products').html('');
 
-                        limitedProducts.forEach(product => {
-                            const html = `
-                        <div class="col-span-6 sm:col-span-3 md:col-span-2">
-                            <div class="border rounded group">
-                                <div class="group-hover:opacity-80 relative">
-                                    <div class="flex justify-center">
-                                        <img style="height:250px !important;" loading="lazy" class="w-full h-[250px] object-contain"
-                                            src="${product.image}" alt="product">
-                                    </div>
-                                </div>
-                                <div class="p-4 mb-3 relative">
-                                    <a href="product-view.html">
-                                        <h4 class="text-[18px] mb-1">${product.title}</h4>
-                                    </a>
-                                    <div class="ratprice">
-                                        <div class="flex gap-3 items-center mb-1">
-                                            <span class="text-primary font-medium">$${product.price}</span>
-                                            <span class="prev_price text-[#687188] text-[14px] line-through font-medium">$55.45</span>
+
+
+    <script type="module">
+        import fetchAndRenderProducts from '../../assets/js/get_product.js';
+
+        const data = await fetchAndRenderProducts()
+        if (data) {
+            $('#products').html('');
+            data.forEach(product => {
+                console.log(product)
+                const html = `
+                            <div class="col-span-6 sm:col-span-3 md:col-span-2">
+                                <div class="border rounded group">
+                                    <div class="group-hover:opacity-80 relative">
+                                        <div class="flex justify-center">
+                                            <img style="height:250px !important;" loading="lazy" class="w-full h-[250px] object-contain"
+                                                src="${product.image}" alt="product">
                                         </div>
-                                        <div class="rating">
-                                            <div class="flex gap-2">
-                                                <div class="flex gap-1">
-                                                    ${'★'.repeat(5).split('').map(() => `
-                                                        <span class="text-yellow-500">
-                                                            <svg width="18" height="18" viewBox="0 0 24 24">
-                                                                <path fill="currentColor"
-                                                                    d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275Z" />
-                                                            </svg>
-                                                        </span>
-                                                    `).join('')}
+                                    </div>
+                                    <div class="p-4 mb-3 relative">
+                                        <a href="product-view.html">
+                                            <h4 class="text-[18px] mb-1">${product.title}</h4>
+                                        </a>
+                                        <div class="ratprice">
+                                            <div class="flex gap-3 items-center mb-1">
+                                                <span class="text-primary font-medium">$${product.price}</span>
+                                                <span class="prev_price text-[#687188] text-[14px] line-through font-medium">$55.45</span>
+                                            </div>
+                                            <div class="rating">
+                                                <div class="flex gap-2">
+                                                    <div class="flex gap-1">
+                                                        ${'★'.repeat(5).split('').map(() => `
+                                                            <span class="text-yellow-500">
+                                                                <svg width="18" height="18" viewBox="0 0 24 24">
+                                                                    <path fill="currentColor"
+                                                                        d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275Z" />
+                                                                </svg>
+                                                            </span>
+                                                        `).join('')}
+                                                    </div>
+                                                    <p class="text-sm">(150)</p>
                                                 </div>
-                                                <p class="text-sm">(150)</p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="mt-4">
-                                        <a href="https://931mb2-by.myshopify.com/cart/${product.variant_id}:1" target="_blank">
-                                            <button class="default_btn">Buy</button>
-                                        </a>
+                                        <div class="mt-4">
+                                            <a href="https://931mb2-by.myshopify.com/cart/${product.variant_id}:1" target="_blank">
+                                                <button class="default_btn">Buy</button>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>`;
-                            $('#products').append(html);
-                        });
-                    },
-                    error: function(xhr, status, error) {
-                        console.error("Error fetching products:", error);
-                    }
-                });
-            }
-
-            fetchAndRenderProducts();
-        });
+                            </div>`;
+                $('#products').append(html);
+            });
+        }
     </script>
 
 </body>
