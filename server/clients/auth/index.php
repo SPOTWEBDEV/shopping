@@ -1,4 +1,6 @@
 <?php
+
+$out = '../../user/login/' ;
 if (isset($_SESSION['login_id']) && $_SESSION['login_id'] != '') {
     $id    = $_SESSION['login_id'];
     $sql   = "SELECT * FROM `client` WHERE `id`='$id'";

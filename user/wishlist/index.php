@@ -23,13 +23,13 @@ if(isset($_GET['del_id'])){
 <html lang="en">
 
 
-<!-- Mirrored from themes.rslahmed.dev/rafcart-tailwind/wishlist.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Apr 2024 11:53:02 GMT -->
+<!-- Mirrored from themes.rslahmed.dev/<?php echo $sitename ?> ||/wishlist.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Apr 2024 11:53:02 GMT -->
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafcart-Tailwind</title>
+    <title><?php echo $sitename ?> || Wishlist</title>
     <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../../assets/css/nice-select2.css">
     <link rel="stylesheet" href="../../assets/css/main.css">

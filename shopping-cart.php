@@ -5,12 +5,12 @@
 <html lang="en">
 
 
-<!-- Mirrored from themes.rslahmed.dev/rafcart-tailwind/shopping-cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Apr 2024 11:52:44 GMT -->
+<!-- Mirrored from themes.rslahmed.dev/<?php echo $sitename ?> ||/shopping-cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Apr 2024 11:52:44 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafcart-Tailwind</title>
+    <title><?php echo $sitename ?> ||</title>
     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/nice-select2.css">
