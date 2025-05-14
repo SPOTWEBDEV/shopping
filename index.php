@@ -32,22 +32,57 @@ include('./server/connection.php')
 
     <!-- hero area -->
     <div class="w-full">
-    <div class="w-full flex items-center">
-        <!-- Slider main container -->
-        <div class="swiper banner-swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide flex items-center bg-no-repeat bg-cover bg-center min-h-[520px]" style="background-image: url(./assets/images/banner-1.jpg);">
-                    <div class="container">
-                        <div class="lg:flex flex-wrap">
-                            <div class="w-full lg:w-1/2">
-                                <div>
-                                    <h1 class="text-[38px] md:text-[56px] lg:text-5xl xl:text-[56px] leading-[42px] md:leading-[64px] lg:leading-[48px] xl:leading-[64px] font-medium mb-2 sm:mb-4 text-secondary">
-                                        Step Into Style With Benco Fashion World</h1>
-                                    <p class="text-secondary text-base mb-2 sm:mb-4">Discover a fashion experience like no other. At <?php echo $sitename ?>, we bring the runway to your doorstep. Explore trendy styles, premium quality, and collections that define confidence and elegance.</p>
-                                    <div class="mt-[30px] md:mt-[40px]">
-                                        <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>pages/product/" tabindex="-1">SHOP NOW</a>
+        <div class="w-full flex items-center">
+            <!-- Slider main container -->
+            <div class="swiper banner-swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide flex items-center bg-no-repeat bg-cover bg-center min-h-[520px]" style="background-image: url(./assets/images/banner-1.jpg);">
+                        <div class="container">
+                            <div class="lg:flex flex-wrap">
+                                <div class="w-full lg:w-1/2">
+                                    <div>
+                                        <h1 class="text-[38px] md:text-[56px] lg:text-5xl xl:text-[56px] leading-[42px] md:leading-[64px] lg:leading-[48px] xl:leading-[64px] font-medium mb-2 sm:mb-4 text-secondary">
+                                            Step Into Style With Benco Fashion World</h1>
+                                        <p class="text-secondary text-base mb-2 sm:mb-4">Discover a fashion experience like no other. At <?php echo $sitename ?>, we bring the runway to your doorstep. Explore trendy styles, premium quality, and collections that define confidence and elegance.</p>
+                                        <div class="mt-[30px] md:mt-[40px]">
+                                            <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>pages/product/" tabindex="-1">SHOP NOW</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex items-center bg-no-repeat bg-cover bg-center min-h-[520px]" style="background-image: url(./assets/images/banner-2.jpg);">
+                        <div class="container">
+                            <div class="lg:flex flex-wrap">
+                                <div class="lg:w-1/2">
+                                    <div>
+                                        <h1 class="text-[38px] md:text-[56px] lg:text-5xl xl:text-[56px] leading-[42px] md:leading-[64px] lg:leading-[48px] xl:leading-[64px] font-medium mb-2 sm:mb-4 text-secondary">
+                                            Fashion That Speaks for You</h1>
+                                        <p class="text-secondary text-base mb-2 sm:mb-4">At <?php echo $sitename ?>, we're passionate about redefining your wardrobe with fashion-forward outfits. Shop our carefully handpicked styles for every mood and moment.</p>
+                                        <div class="mt-[30px] md:mt-[40px]">
+                                            <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>pages/product/" tabindex="-1">SHOP NOW</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex items-center bg-no-repeat bg-cover bg-center min-h-[520px]" style="background-image: url(./assets/images/banner-3.jpg);">
+                        <div class="container">
+                            <div class="lg:flex flex-wrap">
+                                <div class="lg:w-1/2">
+                                    <div>
+                                        <h1 class="text-[38px] md:text-[56px] lg:text-5xl xl:text-[56px] leading-[42px] md:leading-[64px] lg:leading-[48px] xl:leading-[64px] font-medium mb-2 sm:mb-4 text-secondary">
+                                            Your Style, Our Passion</h1>
+                                        <p class="text-secondary text-base mb-2 sm:mb-4">At <?php echo $sitename ?>, fashion meets personality. Let your outfits do the talking as you browse through our vibrant and elegant selections. Designed to make you stand out — effortlessly.</p>
+                                        <div class="mt-[30px] md:mt-[40px]">
+                                            <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>pages/product/" tabindex="-1">SHOP NOW</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -55,50 +90,15 @@ include('./server/connection.php')
                     </div>
                 </div>
 
-                <div class="swiper-slide flex items-center bg-no-repeat bg-cover bg-center min-h-[520px]" style="background-image: url(./assets/images/banner-2.jpg);">
-                    <div class="container">
-                        <div class="lg:flex flex-wrap">
-                            <div class="lg:w-1/2">
-                                <div>
-                                    <h1 class="text-[38px] md:text-[56px] lg:text-5xl xl:text-[56px] leading-[42px] md:leading-[64px] lg:leading-[48px] xl:leading-[64px] font-medium mb-2 sm:mb-4 text-secondary">
-                                        Fashion That Speaks for You</h1>
-                                    <p class="text-secondary text-base mb-2 sm:mb-4">At <?php echo $sitename ?>, we're passionate about redefining your wardrobe with fashion-forward outfits. Shop our carefully handpicked styles for every mood and moment.</p>
-                                    <div class="mt-[30px] md:mt-[40px]">
-                                        <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>pages/product/" tabindex="-1">SHOP NOW</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev hidden xl:block collection-banner"></div>
+                <div class="swiper-button-next hidden xl:block collection-banner"></div>
 
-                <div class="swiper-slide flex items-center bg-no-repeat bg-cover bg-center min-h-[520px]" style="background-image: url(./assets/images/banner-3.jpg);">
-                    <div class="container">
-                        <div class="lg:flex flex-wrap">
-                            <div class="lg:w-1/2">
-                                <div>
-                                    <h1 class="text-[38px] md:text-[56px] lg:text-5xl xl:text-[56px] leading-[42px] md:leading-[64px] lg:leading-[48px] xl:leading-[64px] font-medium mb-2 sm:mb-4 text-secondary">
-                                        Your Style, Our Passion</h1>
-                                    <p class="text-secondary text-base mb-2 sm:mb-4">At <?php echo $sitename ?>, fashion meets personality. Let your outfits do the talking as you browse through our vibrant and elegant selections. Designed to make you stand out — effortlessly.</p>
-                                    <div class="mt-[30px] md:mt-[40px]">
-                                        <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>pages/product/" tabindex="-1">SHOP NOW</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
             </div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev hidden xl:block collection-banner"></div>
-            <div class="swiper-button-next hidden xl:block collection-banner"></div>
-
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
         </div>
     </div>
-</div>
 
     <!-- hero area end -->
 
@@ -185,84 +185,10 @@ include('./server/connection.php')
     <!-- categories -->
     <div class="container pb-14">
         <h2 class="text-[28px] text-secondary mb-6">SHOP BY CATEGORY</h2>
-        <div class="grid grid-cols-2 lg:grid-cols-3 gap-2">
-            <div class="col-span-1 overflow-hidden">
-                <a href="#" class="group h-[150px] sm:h-[250px] flex items-center justify-center relative bg-cover bg-no-repeat bg-center after:absolute after:inset-0 after:bg-[#00000060] after:content-['']" style="background-image: url(./assets/images/category-1.jpg);">
-                    <div class="flex items-center relative z-10">
-                        <h4 class="text-xl leading-6 text-white font-medium">Bedroom</h4>
-                        <div class="text-white opacity-0 group-hover:opacity-100 group-hover:ml-2 transition-all duration-300">
-                            <svg width="20" height="20" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M13.3 17.275q-.3-.3-.288-.725q.013-.425.313-.725L16.15 13H5q-.425 0-.713-.288Q4 12.425 4 12t.287-.713Q4.575 11 5 11h11.15L13.3 8.15q-.3-.3-.3-.713q0-.412.3-.712t.713-.3q.412 0 .712.3L19.3 11.3q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325l-4.6 4.6q-.275.275-.687.275q-.413 0-.713-.3Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-            </div>
+        <div id="category" class="grid grid-cols-2 lg:grid-cols-3 gap-2">
+            
 
-            <div class="col-span-1 overflow-hidden">
-                <a href="#" class="group h-[150px] sm:h-[250px] flex items-center justify-center relative bg-cover bg-no-repeat bg-center after:absolute after:inset-0 after:bg-[#00000060] after:content-['']" style="background-image: url(./assets/images/category-2.jpg);">
-                    <div class="flex items-center relative z-10">
-                        <h4 class="text-xl leading-6 text-white font-medium">Mattresses</h4>
-                        <div class="text-white opacity-0 group-hover:opacity-100 group-hover:ml-2 transition-all duration-300">
-                            <svg width="20" height="20" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M13.3 17.275q-.3-.3-.288-.725q.013-.425.313-.725L16.15 13H5q-.425 0-.713-.288Q4 12.425 4 12t.287-.713Q4.575 11 5 11h11.15L13.3 8.15q-.3-.3-.3-.713q0-.412.3-.712t.713-.3q.412 0 .712.3L19.3 11.3q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325l-4.6 4.6q-.275.275-.687.275q-.413 0-.713-.3Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-span-1 overflow-hidden">
-                <a href="#" class="group h-[150px] sm:h-[250px] flex items-center justify-center relative bg-cover bg-no-repeat bg-center after:absolute after:inset-0 after:bg-[#00000060] after:content-['']" style="background-image: url(./assets/images/category-3.jpg);">
-                    <div class="flex items-center relative z-10">
-                        <h4 class="text-xl leading-6 text-white font-medium">Office</h4>
-                        <div class="text-white opacity-0 group-hover:opacity-100 group-hover:ml-2 transition-all duration-300">
-                            <svg width="20" height="20" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M13.3 17.275q-.3-.3-.288-.725q.013-.425.313-.725L16.15 13H5q-.425 0-.713-.288Q4 12.425 4 12t.287-.713Q4.575 11 5 11h11.15L13.3 8.15q-.3-.3-.3-.713q0-.412.3-.712t.713-.3q.412 0 .712.3L19.3 11.3q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325l-4.6 4.6q-.275.275-.687.275q-.413 0-.713-.3Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-span-1 overflow-hidden">
-                <a href="#" class="group h-[150px] sm:h-[250px] flex items-center justify-center relative bg-cover bg-no-repeat bg-center after:absolute after:inset-0 after:bg-[#00000060] after:content-['']" style="background-image: url(./assets/images/category-4.jpg);">
-                    <div class="flex items-center relative z-10">
-                        <h4 class="text-xl leading-6 text-white font-medium">Outdoor</h4>
-                        <div class="text-white opacity-0 group-hover:opacity-100 group-hover:ml-2 transition-all duration-300">
-                            <svg width="20" height="20" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M13.3 17.275q-.3-.3-.288-.725q.013-.425.313-.725L16.15 13H5q-.425 0-.713-.288Q4 12.425 4 12t.287-.713Q4.575 11 5 11h11.15L13.3 8.15q-.3-.3-.3-.713q0-.412.3-.712t.713-.3q.412 0 .712.3L19.3 11.3q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325l-4.6 4.6q-.275.275-.687.275q-.413 0-.713-.3Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-span-1 overflow-hidden">
-                <a href="#" class="group h-[150px] sm:h-[250px] flex items-center justify-center relative bg-cover bg-no-repeat bg-center after:absolute after:inset-0 after:bg-[#00000060] after:content-['']" style="background-image: url(./assets/images/category-5.jpg);">
-                    <div class="flex items-center relative z-10">
-                        <h4 class="text-xl leading-6 text-white font-medium">Lounges &amp; Sofas</h4>
-                        <div class="text-white opacity-0 group-hover:opacity-100 group-hover:ml-2 transition-all duration-300">
-                            <svg width="20" height="20" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M13.3 17.275q-.3-.3-.288-.725q.013-.425.313-.725L16.15 13H5q-.425 0-.713-.288Q4 12.425 4 12t.287-.713Q4.575 11 5 11h11.15L13.3 8.15q-.3-.3-.3-.713q0-.412.3-.712t.713-.3q.412 0 .712.3L19.3 11.3q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325l-4.6 4.6q-.275.275-.687.275q-.413 0-.713-.3Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-span-1 overflow-hidden">
-                <a href="#" class="group h-[150px] sm:h-[250px] flex items-center justify-center relative bg-cover bg-no-repeat bg-center after:absolute after:inset-0 after:bg-[#00000060] after:content-['']" style="background-image: url(./assets/images/category-6.jpg);">
-                    <div class="flex items-center relative z-10">
-                        <h4 class="text-xl leading-6 text-white font-medium">Living &amp; Dining</h4>
-                        <div class="text-white opacity-0 group-hover:opacity-100 group-hover:ml-2 transition-all duration-300">
-                            <svg width="20" height="20" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M13.3 17.275q-.3-.3-.288-.725q.013-.425.313-.725L16.15 13H5q-.425 0-.713-.288Q4 12.425 4 12t.287-.713Q4.575 11 5 11h11.15L13.3 8.15q-.3-.3-.3-.713q0-.412.3-.712t.713-.3q.412 0 .712.3L19.3 11.3q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325l-4.6 4.6q-.275.275-.687.275q-.413 0-.713-.3Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            
         </div>
     </div>
     <!-- categories end-->
@@ -753,7 +679,41 @@ include('./server/connection.php')
     <script type="module">
         import fetchAndRenderProducts from './assets/js/get_product.js';
         const data = await fetchAndRenderProducts()
-        console.log(data)
+
+        console.log(data);
+
+
+        function dispalyCategory(products) {
+            // Filter out products with empty category
+            const validProducts = products.filter(p => p.category && p.category.trim() !== '');
+
+            // Extract unique categories
+            const uniqueCategories = [...new Set(validProducts.map(p => p))];
+
+            console.log('Filtered Products:', validProducts);
+            console.log('Unique Categories:', uniqueCategories);
+
+            uniqueCategories.forEach(el => {
+                console.log(el)
+                const html = `<div class="col-span-1 overflow-hidden">
+                <a href="#" class="group h-[150px] sm:h-[250px] flex items-center justify-center relative bg-cover bg-no-repeat bg-center after:absolute after:inset-0 after:bg-[#00000060] after:content-['']" style="background-image: url(${el.image});">
+                    <div class="flex items-center relative z-10">
+                        <h4 class="text-xl leading-6 text-white font-medium">${el.category}</h4>
+                        <div class="text-white opacity-0 group-hover:opacity-100 group-hover:ml-2 transition-all duration-300">
+                            <svg width="20" height="20" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M13.3 17.275q-.3-.3-.288-.725q.013-.425.313-.725L16.15 13H5q-.425 0-.713-.288Q4 12.425 4 12t.287-.713Q4.575 11 5 11h11.15L13.3 8.15q-.3-.3-.3-.713q0-.412.3-.712t.713-.3q.412 0 .712.3L19.3 11.3q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325l-4.6 4.6q-.275.275-.687.275q-.413 0-.713-.3Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>`
+            document.getElementById('category').innerHTML += html
+
+            })
+
+            
+        }
+        dispalyCategory(data)
     </script>
 </body>
 

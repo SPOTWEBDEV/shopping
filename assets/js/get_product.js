@@ -21,4 +21,5 @@ async function fetchAndRenderProducts(limit = 20) {
          });
 }
 
+
 export default fetchAndRenderProducts
