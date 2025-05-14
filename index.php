@@ -32,57 +32,22 @@ include('./server/connection.php')
 
     <!-- hero area -->
     <div class="w-full">
-        <div class="w-full flex items-center">
-            <!-- Slider main container -->
-            <div class="swiper banner-swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide flex items-center bg-no-repeat bg-cover bg-center min-h-[520px]" style="background-image: url(./assets/images/banner-1.jpg);">
-                        <div class="container">
-                            <div class="lg:flex flex-wrap">
-                                <div class="w-full lg:w-1/2">
-                                    <div>
-                                        <h1 class="text-[38px] md:text-[56px] lg:text-5xl xl:text-[56px] leading-[42px] md:leading-[64px] lg:leading-[48px] xl:leading-[64px] font-medium mb-2 sm:mb-4 text-secondary">
-                                            Best Collection For Home Decoration</h1>
-                                        <p class="text-secondary text-base mb-2 sm:mb-4">Discover a shopping experience unlike any other. At <?php echo $sitename ?> we're dedicated to delivering excellence right to your doorstep. Immerse yourself in a world where convenience, style, and endless possibilities converge through our meticulously curated selection of products.</p>
-                                        <div class="mt-[30px] md:mt-[40px]">
-                                            <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>pages/product/" tabindex="-1">SHOP NOW</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide flex items-center bg-no-repeat bg-cover bg-center min-h-[520px]" style="background-image: url(./assets/images/banner-2.jpg);">
-                        <div class="container">
-                            <div class="lg:flex flex-wrap">
-                                <div class="lg:w-1/2">
-                                    <div>
-                                        <h1 class="text-[38px] md:text-[56px] lg:text-5xl xl:text-[56px] leading-[42px] md:leading-[64px] lg:leading-[48px] xl:leading-[64px] font-medium mb-2 sm:mb-4 text-secondary">
-                                            Best Collection For Home Decoration</h1>
-                                        <p class="text-secondary text-base mb-2 sm:mb-4">At <?php echo $sitename ?> we're passionate about bringing you the best shopping experience possible. Step into a world of convenience, style, and endless possibilities with our carefully curated selection of products</p>
-                                        <div class="mt-[30px] md:mt-[40px]">
-                                            <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>pages/product/" tabindex="-1">SHOP NOW</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide flex items-center bg-no-repeat bg-cover bg-center min-h-[520px]" style="background-image: url(./assets/images/banner-3.jpg);">
-                        <div class="container">
-                            <div class="lg:flex flex-wrap">
-                                <div class="lg:w-1/2">
-                                    <div>
-                                        <h1 class="text-[38px] md:text-[56px] lg:text-5xl xl:text-[56px] leading-[42px] md:leading-[64px] lg:leading-[48px] xl:leading-[64px] font-medium mb-2 sm:mb-4 text-secondary">
-                                            Best Collection For Home Decoration</h1>
-                                        <p class="text-secondary text-base mb-2 sm:mb-4">Embark on a shopping journey like no other. At <?php echo $sitename ?> we're dedicated to crafting an unforgettable experience tailored just for you. Step into a world where convenience, style, and boundless opportunities await, all within the comfort of your home.</p>
-                                        <div class="mt-[30px] md:mt-[40px]">
-                                            <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>pages/product/" tabindex="-1">SHOP NOW</a>
-                                        </div>
+    <div class="w-full flex items-center">
+        <!-- Slider main container -->
+        <div class="swiper banner-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide flex items-center bg-no-repeat bg-cover bg-center min-h-[520px]" style="background-image: url(./assets/images/banner-1.jpg);">
+                    <div class="container">
+                        <div class="lg:flex flex-wrap">
+                            <div class="w-full lg:w-1/2">
+                                <div>
+                                    <h1 class="text-[38px] md:text-[56px] lg:text-5xl xl:text-[56px] leading-[42px] md:leading-[64px] lg:leading-[48px] xl:leading-[64px] font-medium mb-2 sm:mb-4 text-secondary">
+                                        Step Into Style With Benco Fashion World</h1>
+                                    <p class="text-secondary text-base mb-2 sm:mb-4">Discover a fashion experience like no other. At <?php echo $sitename ?>, we bring the runway to your doorstep. Explore trendy styles, premium quality, and collections that define confidence and elegance.</p>
+                                    <div class="mt-[30px] md:mt-[40px]">
+                                        <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>pages/product/" tabindex="-1">SHOP NOW</a>
                                     </div>
                                 </div>
                             </div>
@@ -90,15 +55,51 @@ include('./server/connection.php')
                     </div>
                 </div>
 
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev hidden xl:block collection-banner"></div>
-                <div class="swiper-button-next hidden xl:block collection-banner"></div>
+                <div class="swiper-slide flex items-center bg-no-repeat bg-cover bg-center min-h-[520px]" style="background-image: url(./assets/images/banner-2.jpg);">
+                    <div class="container">
+                        <div class="lg:flex flex-wrap">
+                            <div class="lg:w-1/2">
+                                <div>
+                                    <h1 class="text-[38px] md:text-[56px] lg:text-5xl xl:text-[56px] leading-[42px] md:leading-[64px] lg:leading-[48px] xl:leading-[64px] font-medium mb-2 sm:mb-4 text-secondary">
+                                        Fashion That Speaks for You</h1>
+                                    <p class="text-secondary text-base mb-2 sm:mb-4">At <?php echo $sitename ?>, we're passionate about redefining your wardrobe with fashion-forward outfits. Shop our carefully handpicked styles for every mood and moment.</p>
+                                    <div class="mt-[30px] md:mt-[40px]">
+                                        <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>pages/product/" tabindex="-1">SHOP NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
+                <div class="swiper-slide flex items-center bg-no-repeat bg-cover bg-center min-h-[520px]" style="background-image: url(./assets/images/banner-3.jpg);">
+                    <div class="container">
+                        <div class="lg:flex flex-wrap">
+                            <div class="lg:w-1/2">
+                                <div>
+                                    <h1 class="text-[38px] md:text-[56px] lg:text-5xl xl:text-[56px] leading-[42px] md:leading-[64px] lg:leading-[48px] xl:leading-[64px] font-medium mb-2 sm:mb-4 text-secondary">
+                                        Your Style, Our Passion</h1>
+                                    <p class="text-secondary text-base mb-2 sm:mb-4">At <?php echo $sitename ?>, fashion meets personality. Let your outfits do the talking as you browse through our vibrant and elegant selections. Designed to make you stand out — effortlessly.</p>
+                                    <div class="mt-[30px] md:mt-[40px]">
+                                        <a class="primary-btn py-2.5" href="<?php echo "$domain" ?>pages/product/" tabindex="-1">SHOP NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev hidden xl:block collection-banner"></div>
+            <div class="swiper-button-next hidden xl:block collection-banner"></div>
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
         </div>
     </div>
+</div>
+
     <!-- hero area end -->
 
     <!-- feature area -->

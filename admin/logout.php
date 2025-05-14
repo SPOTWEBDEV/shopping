@@ -1,6 +1,6 @@
 <?php
-// INCLUDE CONNECTION TO MYSQL DATABASE
-require('../server/database.php');
+// INCLUDE CONNECTION TO MYSQL connection
+require('../server/connection.php');
 
 // INCLUDE USER SESSION AUTH AND DETAILS
 require('../server/admin/authoriazation/index.php');
