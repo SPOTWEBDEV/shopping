@@ -198,12 +198,7 @@ include('./server/connection.php')
         <h2 class="text-[28px] text-secondary mb-6">Top new arrival</h2>
         <!-- Swiper -->
         <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-
-                <?php
-
-                $select_recomended = mysqli_query($connection, "SELECT * FROM `product_table` ORDER BY `id` DESC LIMIT 4");
-                while ($row_recomended = mysqli_fetch_assoc($select_recomended)) { ?>
+            <div class="swiper-wrapper" id="arrival">
                     <div class="swiper-slide">
                         <div class="overflow-hidden rounded-[3px] shadow-sm group">
                             <div class="relative">
@@ -273,10 +268,6 @@ include('./server/connection.php')
                             </div>
                         </div>
                     </div>
-                <?php
-
-                }  ?>
-
             </div>
             <div class="swiper-button-next next-btn"></div>
             <div class="swiper-button-prev prev-btn"></div>
@@ -300,13 +291,7 @@ include('./server/connection.php')
     <!-- recomended for you -->
     <div x-data class="container pb-14">
         <h2 class="text-[28px] text-secondary mb-6">RECOMENDED FOR YOU</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-
-
-            <?php
-
-            $select_recomended = mysqli_query($connection, "SELECT * FROM `product_table` ORDER BY `id` DESC LIMIT 5");
-            while ($row_recomended = mysqli_fetch_assoc($select_recomended)) { ?>
+        <div id="recomended" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
                 <div class="col-span-1 overflow-hidden rounded-[3px] shadow-sm group">
                     <div class="relative">
@@ -377,15 +362,6 @@ include('./server/connection.php')
                         </button>
                     </div>
                 </div>
-
-
-            <?php }
-
-            ?>
-
-
-
-
 
         </div>
 
