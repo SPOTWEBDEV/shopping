@@ -1,6 +1,27 @@
- <?php
+<?php
+function loadEnv($path)
+{
+    if (!file_exists($path)) {
+        throw new Exception(".env file not found at path: $path");
+    }
 
+    $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
+    foreach ($lines as $line) {
+        if (trim($line) === '' || str_starts_with(trim($line), '#')) {
+            continue;
+        }
 
-         ?>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        list($key, $value) = explode('=', $line, 2);
+        $key = trim($key);
+        $value = trim($value);
+
+        // Don't overwrite existing env vars
+        if (!array_key_exists($key, $_ENV)) {
+            putenv("$key=$value");
+            $_ENV[$key] = $value;
+            $_SERVER[$key] = $value;
+        }
+    }
+}
+?>

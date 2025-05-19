@@ -1,5 +1,17 @@
 <?php
 include('../../connection.php');
+require_once '../../config.php'; // Adjust path if needed
+
+
+$projectRoot = dirname(__DIR__,3);
+loadEnv($projectRoot . '/.env');
+
+
+$accessToken = getenv('ACCESS_TOKEN');
+$secretKey = getenv('SECRET_KEY');
+$shopUrl = getenv('SHOP_URL');
+
+echo $accessToken;
 
 // Shopify GraphQL query
 $query = <<<GQL
