@@ -3,9 +3,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-
-<!-- Mirrored from themes.rslahmed.dev/<?php echo $sitename ?> ||/shopping-cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Apr 2024 11:52:44 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -8,7 +8,7 @@ loadEnv($projectRoot . '/.env');
 $storefrontToken = getenv('STOREFRONT_TOKEN');
 $storefrontEndpoint = getenv('STOREFRONT_ENDPOINT');
 
-// Storefront GraphQL Query
+// GraphQL Query for Storefront API
 $query = <<<GQL
 {
   products(first: 100) {
@@ -16,6 +16,8 @@ $query = <<<GQL
       node {
         id
         title
+        description
+        createdAt
         productType
         tags
         options {
@@ -34,6 +36,10 @@ $query = <<<GQL
             node {
               id
               price {
+                amount
+                currencyCode
+              }
+              compareAtPrice {
                 amount
                 currencyCode
               }
@@ -74,11 +80,16 @@ $cleanedProducts = [];
 
 foreach ($products as $product) {
   $node = $product['node'];
-  $variantGID = $node['variants']['edges'][0]['node']['id'] ?? null;
+  $variant = $node['variants']['edges'][0]['node'] ?? [];
+
+  $variantGID = $variant['id'] ?? null;
   preg_match('/(\d+)$/', $variantGID, $matches);
   $variantID = $matches[1] ?? null;
 
-  $price = $node['variants']['edges'][0]['node']['price']['amount'] ?? '';
+  $price = floatval($variant['price']['amount'] ?? 0);
+  $compareAt = floatval($variant['compareAtPrice']['amount'] ?? 0);
+  $isDiscounted = ($compareAt > $price);
+  $discountPercentage = $isDiscounted ? round((($compareAt - $price) / $compareAt) * 100, 2) : 0;
 
   $options = [];
   foreach ($node['options'] as $option) {
@@ -87,13 +98,18 @@ foreach ($products as $product) {
 
   $cleanedProducts[] = [
     'title' => $node['title'],
+    'description' => $node['description'],
+    'created_at' => $node['createdAt'],
     'image' => $node['images']['edges'][0]['node']['url'] ?? '',
     'price' => $price,
+    'compare_at_price' => $compareAt,
+    'discounted' => $isDiscounted,
+    'discount_percentage' => $discountPercentage,
     'variant_id' => $variantID,
     'category' => $node['productType'],
     'tags' => $node['tags'] ?? [],
     'options' => $options,
-    'target_gender' => '' // Storefront API doesn't expose metafields directly for collections
+    'target_gender' => '' // Not available via Storefront API
   ];
 }
 
