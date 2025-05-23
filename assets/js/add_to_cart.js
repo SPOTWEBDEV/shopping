@@ -23,7 +23,7 @@ if (window.location.href == 'http://localhost/market/shopping-cart.php') {
                                                      <img loading="lazy" src="./uploads/products/${product_front_photo}" alt="product">
                                                  </div>
                                                  <div class="pl-10 lg:pl-0">
-                                                     <a href="product-view.html">
+                                                     <a href="product-viewhtml">
                                                          <h5>${product_name}</h5>
                                                      </a>
                                                      <p class="text-primary font-medium">${formate_number(product_price)}</p>

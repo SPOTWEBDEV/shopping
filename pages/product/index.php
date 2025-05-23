@@ -328,7 +328,7 @@ include('../../server/connection.php');
                                         </div>
                                     </div>
                                     <div class="p-4 mb-3 relative">
-                                        <a href="product-view.html">
+                                        <a href="product-viewhtml">
                                             <h4 class="text-[18px] mb-1">${product.title}</h4>
                                         </a>
                                         <div class="ratprice">
