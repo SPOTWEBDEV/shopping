@@ -567,7 +567,7 @@
                     <li><a href="<?php echo $domain ?>pages/contact/" class="text-white leading-[26px] flex items-center text-base font-medium px-2.5 py-[15px] transition duration-300">Contact</a>
                     </li>
 
-                    <li><a href="<?php echo $domain ?>user/add_product/" class="text-white leading-[26px] flex items-center text-base font-medium px-2.5 py-[15px] transition duration-300">Add-Product</a>
+                    <li><a href="<?php echo $domain ?>user/pages/product/" class="text-white leading-[26px] flex items-center text-base font-medium px-2.5 py-[15px] transition duration-300">Products</a>
                     </li>
                 </ul>
                 <!-- left-content end-->
