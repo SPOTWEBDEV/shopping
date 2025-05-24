@@ -15,7 +15,9 @@ include('../../server/connection.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $sitename ?> || Product</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="shortcut icon" href="..assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../../assets/css/nice-select2.css">
@@ -44,7 +46,7 @@ include('../../server/connection.php');
                 </span>
 
             </a>
-            <a href="list-view.html" class="text-primary text-[13px] sm:text-base">Shop</a>
+            <a href="list-view.html" class="text-primary text-[13px] sm:text-base">All Products</a>
             <span>
                 <svg width="22" height="22" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6l-6-6z" />
@@ -127,34 +129,8 @@ include('../../server/connection.php');
                         </div>
 
                         <div class="pb-4 border-b border-[#E9E4E4] mb-4">
-                            <h4 class="text-xl font-medium mb-3 text-secondary uppercase">Brands</h4>
-                            <div class="space-y-3">
-                                <div class="flex gap-3 items-center">
-                                    <input type="checkbox" id="adidas"
-                                        class="focus:ring-0 text-primary focus:bg-primaryfocus:outline-none" checked>
-                                    <label for="adidas" class="relative cursor-pointer text-secondary">Adidas</label>
-                                </div>
-                                <div class="flex gap-3 items-center">
-                                    <input type="checkbox" id="nike"
-                                        class="focus:ring-0 text-primary focus:bg-primaryfocus:outline-none">
-                                    <label for="nike" class="relative cursor-pointer text-secondary">Nike</label>
-                                </div>
-                                <div class="flex gap-3 items-center">
-                                    <input type="checkbox" id="easy"
-                                        class="focus:ring-0 text-primary focus:bg-primaryfocus:outline-none">
-                                    <label for="easy" class="relative cursor-pointer text-secondary">Easy</label>
-                                </div>
-                                <div class="flex gap-3 items-center">
-                                    <input type="checkbox" id="arong"
-                                        class="focus:ring-0 text-primary focus:bg-primaryfocus:outline-none">
-                                    <label for="arong" class="relative cursor-pointer text-secondary">Arong</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="pb-4 border-b border-[#E9E4E4] mb-4">
                             <h4 class="text-xl font-medium  text-secondary uppercase">Price</h4>
-                            <span id="rangeValue" class="block relative text-center text-xl font-semibold">1</span>
+                            <span id="rangeValue" class="block relative text-center text-xl font-semibold">$1</span>
                             <input type="range" class="range filterDataByPrice" min="0" value="1" max="1000" />
                         </div>
 
@@ -183,31 +159,6 @@ include('../../server/connection.php');
                                 </div>
                             </div>
                         </div>
-
-                        <div class="pb-4 border-b border-[#E9E4E4] mt-4">
-                            <h4 class="text-xl uppercase mb-3 text-secondary">Color</h4>
-                            <div class="size_selector color_selector flex gap-3 items-center">
-                                <div class="single_size_opt">
-                                    <input type="radio" class="size_inp" id="color-purple">
-                                    <label for="color-purple" class="w-6 h-6 bg-primary focus:ring-1  inline-block"
-                                        data-bs-toggle="tooltip" title="" data-bs-original-title="Rose Red"
-                                        aria-label="Rose Red" checked=""></label>
-                                </div>
-                                <div class="single_size_opt ms-2">
-                                    <input type="radio" hidden="" name="color" class="size_inp" id="color-red">
-                                    <label for="color-red"
-                                        class="w-6 h-6  bg-white focus:bg-white focus:ring-1  inline-block"
-                                        data-bs-toggle="tooltip" title="" data-bs-original-title="White"
-                                        aria-label="White"></label>
-                                </div>
-                                <div class="single_size_opt ms-2">
-                                    <input type="radio" hidden="" name="color" class="size_inp" id="color-green">
-                                    <label for="color-green" class="w-6 h-6  bg-black focus:ring-1  inline-block"
-                                        data-bs-toggle="tooltip" title="" data-bs-original-title="Black"
-                                        aria-label="Black"></label>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -229,24 +180,6 @@ include('../../server/connection.php');
 
 
                 </div>
-
-                <div class="mt-5 flex items-center justify-center gap-2.5">
-                    <button
-                        class="w-[30px] h-[30px] leading-[30px] text-[15px] text-center bg-primary text-white">1</button>
-                    <button
-                        class="w-[30px] h-[30px] leading-[30px] text-[15px] text-center border border-[#E9E4E4] text-secondary hover:text-white hover:bg-primary transition duration-300">2</button>
-                    <button
-                        class="w-[30px] h-[30px] leading-[30px] text-[15px] text-center border border-[#E9E4E4] text-secondary hover:text-white hover:bg-primary transition duration-300">3</button>
-                    <button
-                        class="w-[30px] h-[30px] leading-[30px] text-[15px] text-center border border-[#E9E4E4] text-secondary hover:text-white hover:bg-primary transition duration-300">4</button>
-                    <button
-                        class="w-[30px] h-[30px] leading-[30px] text-[15px] flex items-center justify-center border border-[#E9E4E4] text-secondary hover:text-white hover:bg-primary transition duration-300">
-                        <svg width="15" height="15" viewBox="0 0 32 32">
-                            <path fill="currentColor"
-                                d="M21.188 9.281L19.78 10.72L24.063 15H4v2h20.063l-4.282 4.281l1.407 1.438L27.905 16z" />
-                        </svg>
-                    </button>
-                </div>
             </div>
         </div>
     </div>
@@ -262,41 +195,41 @@ include('../../server/connection.php');
     <script src="../../assets/js/nice-select2.js"></script>
     <script src="../../assets/js/main.js"></script>
     <script>
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            loop: true,
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        loop: true,
 
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-        });
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
 
 
-        // product image slider
-        const productSwiper = new Swiper('.productSwiper', {
-            slidesPerView: '4',
-            spaceBetween: 8,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-        const productImageModule = {
-            productImages: [
-                '../../assets/images/headphone-3.png',
-                '../../assets/images/apple-watch.png',
-                '../../assets/images/watch3.png',
-                '../../assets/images/watch2.png',
-            ],
-            imageIndex: 0
-        }
+    // product image slider
+    const productSwiper = new Swiper('.productSwiper', {
+        slidesPerView: '4',
+        spaceBetween: 8,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+    const productImageModule = {
+        productImages: [
+            '../../assets/images/headphone-3.png',
+            '../../assets/images/apple-watch.png',
+            '../../assets/images/watch3.png',
+            '../../assets/images/watch2.png',
+        ],
+        imageIndex: 0
+    }
 
-        document.addEventListener('alpine:init', () => {
-            Alpine.store('productView', {
-                isActive: false
-            })
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('productView', {
+            isActive: false
         })
+    })
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
@@ -308,77 +241,81 @@ include('../../server/connection.php');
 
 
     <script type="module">
-        import fetchAndRenderProducts from '../../assets/js/get_product.js';
+    import fetchAndRenderProducts from '../../assets/js/get_product.js';
 
-        const data = await fetchAndRenderProducts()
+    const data = await fetchAndRenderProducts()
 
-        const renderProducts = (product) => {
+    const renderProducts = (product) => {
+        $('#products').html('');
 
-            $('#products').html('');
-            product.forEach(product => {
-                console.log(product);
+        product.forEach(product => {
+            const {
+                title,
+                category,
+                price,
+                image,
+                compare_at_price,
+                description,
+                variant_id,
+                options
+            } = product;
 
-                const html = `
-                            <div class="col-span-6 sm:col-span-3 md:col-span-2">
-                                <div class="border rounded group">
-                                    <div class="group-hover:opacity-80 relative">
-                                        <div class="flex justify-center">
-                                            <img style="height:250px !important;" loading="lazy" class="w-full h-[250px] object-contain"
-                                                src="${product.image}" alt="product">
-                                        </div>
-                                    </div>
-                                    <div class="p-4 mb-3 relative">
-                                        <a href="product-viewhtml">
-                                            <h4 class="text-[18px] mb-1">${product.title}</h4>
-                                        </a>
-                                        <div class="ratprice">
-                                            <div class="flex gap-3 items-center mb-1">
-                                                <span class="text-primary font-medium">$${product.price}</span>
-                                                <span class="prev_price text-[#687188] text-[14px] line-through font-medium">$55.45</span>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="flex gap-2">
-                                                    <div class="flex gap-1">
-                                                        ${'★'.repeat(5).split('').map(() => `
-                                                            <span class="text-yellow-500">
-                                                                <svg width="18" height="18" viewBox="0 0 24 24">
-                                                                    <path fill="currentColor"
-                                                                        d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275Z" />
-                                                                </svg>
-                                                            </span>
-                                                        `).join('')}
-                                                    </div>
-                                                    <p class="text-sm">(150)</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-4">
-                                            <a href="https://931mb2-by.myshopify.com/cart/${product.variant_id}:1" target="_blank">
-                                                <button class="default_btn">Buy</button>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>`;
-                $('#products').append(html);
-            });
+            const discountAvailable = compare_at_price > price;
+            const discountPercent = discountAvailable ?
+                Math.round(((compare_at_price - price) / compare_at_price) * 100) :
+                0;
 
-        }
-        renderProducts(data)
+            const priceHTML = `
+            <div class="flex gap-3 items-center mb-1">
+                <span class="text-primary font-medium">$${price.toFixed(2)}</span>
+                ${discountAvailable ? `<span class="prev_price text-[#687188] text-[14px] line-through font-medium">$${compare_at_price.toFixed(2)}</span>` : ''}
+                ${discountAvailable ? `<span class="ml-2 text-sm bg-primary text-white px-2 py-[2px] rounded">-${discountPercent}%</span>` : ''}
+            </div>`;
 
-        let filterDataByPrice = document.querySelector('.filterDataByPrice')
+            const html = `
+            <div class="col-span-6 sm:col-span-3 md:col-span-2">
+                <div class="border rounded group">
+                    <div class="group-hover:opacity-80 relative">
+                        <div class="flex justify-center">
+                            <img style="height:250px !important;" loading="lazy" class="w-full h-[250px] object-contain"
+                                src="${image}" alt="product">
+                        </div>
+                    </div>
+                    <div class="p-4 mb-3 relative">
+                        <a href="product-viewhtml">
+                            <h4 class="text-[18px] mb-1">${title}</h4>
+                        </a>
+                        <div class="ratprice">
+                            ${priceHTML}
+                        </div>
+                        <div class="mt-4">
+                            <a href="../product-view/?id=${variant_id}" target="_self">
+                                <button class="default_btn">View Product</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
 
-        filterDataByPrice.addEventListener('change', (event) => {
-            document.querySelector('#rangeValue').innerHTML = event.target.value
-            const minPrice = parseFloat(event.target.value); // convert to number
+            $('#products').append(html);
+        });
+    }
 
-            const newData = data.filter(product => {
-                return parseFloat(product.price) >= minPrice; // filter from this value upward
-            });
+    renderProducts(data)
+
+    let filterDataByPrice = document.querySelector('.filterDataByPrice')
+
+    filterDataByPrice.addEventListener('change', (event) => {
+        document.querySelector('#rangeValue').innerHTML = '$' + event.target.value
+        const minPrice = parseFloat(event.target.value); // convert to number
+
+        const newData = data.filter(product => {
+            return parseFloat(product.price) >= minPrice; // filter from this value upward
+        });
 
 
-            renderProducts(newData)
-        })
+        renderProducts(newData)
+    })
     </script>
 
 </body>

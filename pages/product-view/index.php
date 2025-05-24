@@ -46,7 +46,7 @@ include('../../server/connection.php');
                 </span>
 
             </a>
-            <a href="list-view.html" class="text-primary text-[13px] sm:text-base">Shop</a>
+            <a href="list-view.html" class="text-primary text-[13px] sm:text-base">View Product</a>
             <span>
                 <svg width="22" height="22" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6l-6-6z" />
@@ -63,19 +63,7 @@ include('../../server/connection.php');
 
 
             <div class="col-span-4">
-                <div class="flex items-center">
-                    <div class="lg:hidden block pr-4">
-                        <button @click="isOpen=true"
-                            class="pt-2 pb-[9px]  border border-primary px-2.5 min-w-[150px] primary-btn"
-                            id="mobile_filter_btn">FILTER</button>
-                    </div>
-
-
-
-                </div>
-
-
-
+                
                 <div class="product_view_wrap section_padding_b" id="singleProduct">
 
                 </div>
@@ -144,182 +132,72 @@ include('../../server/connection.php');
 
     const data = await fetchAndRenderProducts(); // fetched array of products
 
-    function renderProducts(products) {
-        products.forEach(product => {
+  function renderProducts(products) {
+    products.forEach(product => {
+        if (product.variant_id == id) {
+            console.log(product);
 
+            const {
+                title,
+                category,
+                price,
+                image,
+                compare_at_price,
+                description,
+                variant_id,
+                options
+            } = product;
 
-            if (product.variant_id == id) {
+            const { Color = [], Size = [] } = options;
 
-                console.log(product);
-                
+            const discount = compare_at_price > 0
+                ? ((1 - (price / compare_at_price)) * 100).toFixed(0)
+                : 0;
 
-                const {
-                    title,
-                    category,
-                    create_at,
-                    price,
-                    image,
-                    compare_at_price,
-                    description,
-                    variant_id
-                } = product;
-
-                const html = `<div class="container">
-                        <div class="grid grid-cols-12 gap-6">
-                            <div class="col-span-12 lg:col-span-6" x-data="productImageModule">
-
-                                <div class="flex justify-center items-center">
-                                    <img loading="lazy" :src="productImages[imageIndex]" alt="product">
+            const html = `<div class="container">
+                <div class="grid grid-cols-12 gap-6">
+                    <div class="col-span-12 lg:col-span-6" x-data="productImageModule">
+                        <div class="flex justify-center items-center">
+                            <img loading="lazy" src="${image}" alt="product">
+                        </div>
+                    </div>
+                    <div class="col-span-12 lg:col-span-6">
+                        <div class="product_info_wrapper">
+                            <div class="product_base_info">
+                                <h1 class="text-2xl sm:text-3xl uppercase">${title}</h1>
+                                <div class="space-y-2 mt-4">
+                                    <p><span class="font-medium pr-3">Availability:</span><span class="text-[#08B54C] font-medium">In Stock</span></p>
+                                    <p><span class="font-medium pr-3">Category:</span>${category}</p>
+                                    <p><span class="font-medium pr-3">SKU:</span>${variant_id}</p>
+                                </div>
+                                <div class="mt-3 flex gap-3 items-center overflow-hidden">
+                                    <span class="line-through">$${compare_at_price.toFixed(2)}</span>
+                                    <span class="text-2xl text-primary font-semibold">$${price.toFixed(2)}</span>
+                                    <div class="ml-3 text-sm bg-primary text-white px-2 py-[2px] relative after:absolute after:w-[14px] after:h-[14px] after:bg-primary after:-left-1 after:top-1 after:rotate-45">
+                                        -${discount}%
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <p>${description}</p>
                                 </div>
 
-                                <div class="swiper mt-4 relative group">
-                                    <div x-data="productImages" class="swiper-wrapper flex">
-                                        <template x-for="(img, index) in productImages">
-                                            <div class="swiper-slide">
-                                                <div class="w-full h-[80px] flex justify-center items-center"
-                                                    @click="imageIndex = index">
-                                                    <img loading="lazy" :src="img" alt="product"
-                                                        :class="imageIndex === index ? 'border border-primary' : ''"
-                                                        class="w-full h-full object-cover cursor-pointer">
-                                                </div>
-                                            </div>
-                                        </template>
-                                    </div>
-
-                                    <div
-                                        class="swiper-button-next box_shadow w-8 h-8 bg-[#eceef0] absolute right-0 top-1/2 opacity-0 group-hover:opacity-100 transition duration-300">
-                                    </div>
-                                    <div
-                                        class="swiper-button-prev box_shadow w-8 h-8 bg-[#eceef0] absolute left-0 top-1/2 opacity-0 group-hover:opacity-100 transition duration-300">
-                                    </div>
-
+                                <!-- Size -->
+                                <div class="shop_filter mt-4">
+                                    <h4 class="text-sm font-medium text-secondary uppercase mb-2">Size</h4>
+                                    <div class="flex gap-3 items-center" id="size-options"></div>
                                 </div>
 
-                            </div>
-                            <div class="col-span-12 lg:col-span-6">
-                                <div class="product_info_wrapper">
-                                    <div class="product_base_info">
-                                        <h1 class="text-2xl sm:text-3xl uppercase">${title}</h1>
+                                <!-- Color -->
+                                <div class="pb-4 mt-4">
+                                    <h4 class="text-sm uppercase mb-3 text-secondary">Color</h4>
+                                    <div class="size_selector color_selector flex gap-3 items-center" id="color-options"></div>
+                                </div>
 
-                                        <div class="space-y-2 mt-4">
-                                            <p><span class="font-medium pr-3">Availability:</span><span
-                                                    class="text-[#08B54C] font-medium">In Stock</span></p>
-                                            <p><span class="font-medium pr-3">Brand:</span>Bata</p>
-                                            <p><span class="font-medium pr-3">Category:</span>${category}</p>
-                                            <p><span class="font-medium pr-3">SKU:</span>BE45VGRT</p>
-                                        </div>
-                                        <div class="mt-3 flex gap-3 items-center overflow-hidden">
-                                            <span class="line-through">$5000.00</span>
-                                            <span class="text-2xl text-primary font-semibold">$4500.00</span>
-                                            <div
-                                                class="ml-3 text-sm bg-primary text-white px-2 py-[2px] relative after:absolute after:w-[14px] after:h-[14px] after:bg-primary after:-left-1 after:top-1 after:rotate-45">
-                                                -30%</div>
-                                        </div>
-                                        <div class="mt-2">
-                                            <p>
-            ${description}
-                                            </p>
-                                        </div>
-                                        <!-- size -->
-                                        <div class="shop_filter mt-4">
-                                            <h4 class="text-sm font-medium  text-secondary uppercase mb-2">Size</h4>
-                                            <div class="flex gap-3 items-center">
-                                                <div class="single_size_opt">
-                                                    <input type="radio" name="size" class="size_inp hidden" id="size-xs"
-                                                        checked>
-                                                    <label for="size-xs" class="px-1.5 py-1">XS</label>
-                                                </div>
-                                                <div class="single_size_opt ms-2">
-                                                    <input type="radio" hidden name="size" class="size_inp hidden"
-                                                        id="size-s">
-                                                    <label for="size-s" class="px-2.5 py-1">S</label>
-                                                </div>
-                                                <div class="single_size_opt ms-2">
-                                                    <input type="radio" hidden name="size" class="size_inp hidden"
-                                                        id="size-m">
-                                                    <label for="size-m" class="px-2.5 py-1">M</label>
-                                                </div>
-                                                <div class="single_size_opt ms-2">
-                                                    <input type="radio" hidden name="size" class="size_inp hidden"
-                                                        id="size-l">
-                                                    <label for="size-l" class="px-2.5 py-1">L</label>
-                                                </div>
-                                                <div class="single_size_opt ms-2">
-                                                    <input type="radio" hidden name="size" class="size_inp hidden"
-                                                        id="size-xl">
-                                                    <label for="size-xl" class="px-1.5 py-1">XL</label>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <!-- Quantity, Buttons, etc. -->
+                                <!-- KEEP THE REST UNCHANGED -->
 
-                                        <!-- color -->
-                                        <div class="pb-4 mt-4">
-                                            <h4 class="text-sm uppercase mb-3 text-secondary">Color</h4>
-                                            <div class="size_selector color_selector flex gap-3 items-center">
-                                                <div class="single_size_opt relative group">
-                                                    <input type="radio" class="size_inp hidden" id="color-purple">
-                                                    <label for="color-purple"
-                                                        class="w-6 h-6 bg-primary focus:ring-1  inline-block"
-                                                        data-bs-toggle="tooltip" title=""
-                                                        data-bs-original-title="Rose Red" aria-label="Rose Red"
-                                                        checked=""></label>
-                                                    <p
-                                                        class="absolute -left-3 -top-9 opacity-0 group-hover:opacity-100 invisible group-hover:visible text-sm text-white bg-black w-20 py-1 text-center rounded after:absolute after:w-2 after:h-2 after:bg-black after:rotate-45 after:-bottom-1 after:left-4">
-                                                        Rose Red</p>
-                                                </div>
-                                                <div class="single_size_opt relative group">
-                                                    <input type="radio" hidden="" name="color" class="size_inp hidden"
-                                                        id="color-red">
-                                                    <label for="color-red"
-                                                        class="w-6 h-6  bg-white focus:bg-white focus:ring-1  inline-block"
-                                                        data-bs-toggle="tooltip" title="" data-bs-original-title="White"
-                                                        aria-label="White"></label>
-                                                    <p
-                                                        class="absolute -left-3 -top-9 opacity-0 group-hover:opacity-100 invisible group-hover:visible text-sm text-white bg-black w-16 py-1 text-center rounded after:absolute after:w-2 after:h-2 after:bg-black after:rotate-45 after:-bottom-1 after:left-4">
-                                                        White</p>
-                                                </div>
-                                                <div class="single_size_opt relative group">
-                                                    <input type="radio" hidden="" name="color" class="size_inp hidden"
-                                                        id="color-green">
-                                                    <label for="color-green"
-                                                        class="w-6 h-6  bg-black focus:ring-1  inline-block"
-                                                        data-bs-toggle="tooltip" title="" data-bs-original-title="Black"
-                                                        aria-label="Black"></label>
-                                                    <p
-                                                        class="absolute -left-3 -top-9 opacity-0 group-hover:opacity-100 invisible group-hover:visible text-sm text-white bg-black w-16 py-1 text-center rounded after:absolute after:w-2 after:h-2 after:bg-black after:rotate-45 after:-bottom-1 after:left-4">
-                                                        Black</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- quantity -->
-                                        <div x-data="{number:4}" class="cart_qnty ms-md-auto">
-                                            <p>Quantity</p>
-                                            <div x-data="{count:0}" x-modelable="count" x-model="number"
-                                                class="flex items-center  mt-1">
-                                                <div @click="count--"
-                                                    class="w-8 h-8 border hover:bg-[#E9E4E4] flex justify-center items-center cursor-pointer">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                        viewBox="0 0 24 24">
-                                                        <path fill="currentColor" d="M19 12.998H5v-2h14z" />
-                                                    </svg>
-                                                </div>
-                                                <div x-text="number"
-                                                    class="w-8 h-8 border flex justify-center items-center">4</div>
-                                                <div @click="count++"
-                                                    class="w-8 h-8 border hover:bg-[#E9E4E4] flex justify-center items-center cursor-pointer">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                        viewBox="0 0 24 24">
-                                                        <path fill="currentColor"
-                                                            d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- add to cart & wishlist -->
-                                    <div class="flex gap-5 mt-6 border-b pb-5">
-                                        <a href="shopping-cart.html"
+                                <div class="flex gap-5 mt-6 border-b pb-5">
+                                        <a href="https://931mb2-by.myshopify.com/cart/${product.variant_id}:1"
                                             class="flex gap-2 items-center border border-primary bg-primary text-sm sm:text-base text-white hover:bg-white hover:text-primary transition duration-300 px-2 sm:px-8 py-2 rounded uppercase group">
                                             <span class="text-white group-hover:text-primary">
                                                 <!-- <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
@@ -331,25 +209,43 @@ include('../../server/connection.php');
                                         </a>
 
                                     </div>
-
-                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>`;
 
+            // Inject product HTML into container
+            document.getElementById('singleProduct').innerHTML = html;
 
-                    </div>`
+            // Dynamically insert sizes
+            const sizeContainer = document.getElementById('size-options');
+            sizeContainer.innerHTML = Size.map((size, i) => `
+                <div class="single_size_opt">
+                    <input type="radio" name="size" class="size_inp hidden" id="size-${i}">
+                    <label for="size-${i}" class="px-1.5 py-1">${size}</label>
+                </div>
+            `).join('');
 
+            // Dynamically insert colors
+            const colorContainer = document.getElementById('color-options');
+            colorContainer.innerHTML = Color.map((color, i) => `
+                <div class="single_size_opt relative group">
+                    <input type="radio" name="color" class="size_inp hidden" id="color-${i}">
+                    <label for="color-${i}"
+                        class="w-6 h-6  focus:ring-1 inline-block"
+                        data-bs-toggle="tooltip" style="background:${color.toLowerCase()}" title="${color}" aria-label="${color}"></label>
+                    <p class="absolute -left-3 -top-9 opacity-0 group-hover:opacity-100 invisible group-hover:visible text-sm text-white bg-black w-20 py-1 text-center rounded after:absolute after:w-2 after:h-2 after:bg-black after:rotate-45 after:-bottom-1 after:left-4">
+                        ${color}
+                    </p>
+                </div>
+            `).join('');
+        }
+    });
+}
 
-                document.getElementById('singleProduct').innerHTML = html;
-            }
+renderProducts(data)
 
-
-
-
-        });
-    }
-
-    renderProducts(data);
     </script>
 
 </body>
