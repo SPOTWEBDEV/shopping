@@ -81,7 +81,7 @@
                             <h4 class="text-base text-secondary mb-2">2 Items</h4>
                         </div>
                         <div>
-                            <a href="product-view.html" class="flex items-start pr-5 mb-4 relative">
+                            <a href="product-viewhtml" class="flex items-start pr-5 mb-4 relative">
                                 <span class="absolute right-0 hover:text-primary transition duration-300"><svg width="18" height="18" viewBox="0 0 32 32">
                                         <path fill="currentColor" d="M7.219 5.781L5.78 7.22L14.563 16L5.78 24.781l1.44 1.439L16 17.437l8.781 8.782l1.438-1.438L17.437 16l8.782-8.781L24.78 5.78L16 14.563z" />
                                     </svg></span>
@@ -96,7 +96,7 @@
                                     <p class="text-[#464545] text-sm">x1 <span class="ms-2">$450</span></p>
                                 </div>
                             </a>
-                            <a href="product-view.html" class="flex items-start pr-5 mb-4 relative">
+                            <a href="product-viewhtml" class="flex items-start pr-5 mb-4 relative">
                                 <span class="absolute right-0 hover:text-primary transition duration-300"><svg width="18" height="18" viewBox="0 0 32 32">
                                         <path fill="currentColor" d="M7.219 5.781L5.78 7.22L14.563 16L5.78 24.781l1.44 1.439L16 17.437l8.781 8.782l1.438-1.438L17.437 16l8.782-8.781L24.78 5.78L16 14.563z" />
                                     </svg></span>
@@ -567,7 +567,7 @@
                     <li><a href="<?php echo $domain ?>pages/contact/" class="text-white leading-[26px] flex items-center text-base font-medium px-2.5 py-[15px] transition duration-300">Contact</a>
                     </li>
 
-                    <li><a href="<?php echo $domain ?>user/pages/product/" class="text-white leading-[26px] flex items-center text-base font-medium px-2.5 py-[15px] transition duration-300">Products</a>
+                    <li><a href="<?php echo $domain ?>pages/product/" class="text-white leading-[26px] flex items-center text-base font-medium px-2.5 py-[15px] transition duration-300">Products</a>
                     </li>
                 </ul>
                 <!-- left-content end-->
@@ -772,7 +772,7 @@
         </form>
         <!-- search product -->
         <div class="overflow-y-auto pt-4">
-            <a href="product-view.html" class="flex items-center border-b border-[#ebebeb] py-2 hover:bg-[#f2f0f0] transition duration-300">
+            <a href="product-viewhtml" class="flex items-center border-b border-[#ebebeb] py-2 hover:bg-[#f2f0f0] transition duration-300">
                 <div class="w-[90px] p-2.5">
                     <img src="./assets/images/laptop-2.png" class="w-full h-[50px] object-contain flex-shrink-0" alt="product">
                 </div>
@@ -784,7 +784,7 @@
                     </div>
                 </div>
             </a>
-            <a href="product-view.html" class="flex items-center border-b border-[#ebebeb] py-2 hover:bg-[#f2f0f0] transition duration-300">
+            <a href="product-viewhtml" class="flex items-center border-b border-[#ebebeb] py-2 hover:bg-[#f2f0f0] transition duration-300">
                 <div class="w-[90px] p-2.5">
                     <img loading="lazy" src="./assets/images/phone-1.png" class="w-full h-[50px] object-contain flex-shrink-0" alt="product">
                 </div>
@@ -818,7 +818,7 @@
                     <h4 class="text-base mb-1.5 font-medium text-secondary">Total 2 Items</h4>
                 </div>
                 <div>
-                    <a href="product-view.html" class="flex relative pr-5 mb-4">
+                    <a href="product-viewhtml" class="flex relative pr-5 mb-4">
                         <span class="absolute right-0 cursor-pointer text-secondary hover:text-primary transition duration-300">
                             <svg width="16" height="16" viewBox="0 0 32 32">
                                 <path fill="currentColor" d="M7.219 5.781L5.78 7.22L14.563 16L5.78 24.781l1.44 1.439L16 17.437l8.781 8.782l1.438-1.438L17.437 16l8.782-8.781L24.78 5.78L16 14.563z" />
@@ -835,7 +835,7 @@
                             </p>
                         </div>
                     </a>
-                    <a href="product-view.html" class="flex relative pr-5 mb-4">
+                    <a href="product-viewhtml" class="flex relative pr-5 mb-4">
                         <span class="absolute right-0 cursor-pointer text-secondary hover:text-primary transition duration-300">
                             <svg width="16" height="16" viewBox="0 0 32 32">
                                 <path fill="currentColor" d="M7.219 5.781L5.78 7.22L14.563 16L5.78 24.781l1.44 1.439L16 17.437l8.781 8.782l1.438-1.438L17.437 16l8.782-8.781L24.78 5.78L16 14.563z" />

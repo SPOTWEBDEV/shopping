@@ -88,7 +88,7 @@ if(isset($_GET['del_id'])){
                             <img loading="lazy" class="w-full h-full object-cover" src="../../uploads/products/<?php echo $row_wishlist['product_front_photo'] ?>" alt="product">
                         </div>
                         <div class="mt-6 md:mt-0">
-                            <a href="product-view.html" class="hover:text-primary transition durition-300">
+                            <a href="product-viewhtml" class="hover:text-primary transition durition-300">
                                 <h5 class="capitalize"><?php echo $row_wishlist['product_name'] ?></h5>
                             </a>
                             <p class="instock mb-0">Availability: <span class="text-[#28A745]">In Stock</span></p>
