@@ -111,8 +111,7 @@ include('../../server/connection.php');
                                 <circle cx=" 256 " cy=" 192 " r=" 48 " fill=" none " stroke=" currentColor "
                                     stroke-linecap=" round " stroke-linejoin=" round " stroke-width=" 32 " /></svg>
                         </p>
-                        <p class=" pl-[32px] "> 7895 Dr New Albuquerue, NM 19800, nited
-                            States Of America </p>
+                        <p class=" pl-[32px] "> <?php echo $siteaddress ?> </p>
                     </div>
                     <div class=" relative pb-3 ">
                         <span class=" absolute left-0 top-1 ">
