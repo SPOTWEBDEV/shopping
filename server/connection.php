@@ -64,7 +64,7 @@ $siteemail = "support@bencofashion.com";
 $emailpassword  = "support@bencofashion.com";
 $host = 'mail.bencofashion.com';
 $sitephone  = "+44 776 0957 798";
-$siteaddress  = "Weston, New York";
+$siteaddress  = "7323 Queens Gate Circle Jacksonville Florida 32219";
 
 
 // $accessToken = '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';
